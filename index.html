@@ -1,26 +1,36 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <title>AndesMap</title>
+    <title>ANDES | Apps de Salud</title>
     <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-    <section>
-        <iframe width="1920" height="1080"
-                src="https://xd.adobe.com/embed/684f5cfe-65d5-483c-73df-a1ace5484508-1e7e/?fullscreen" frameborder="0"
-                allowfullscreen></iframe>
-    </section>
-    <app-root></app-root>
-    <script type="text/javascript" src="runtime.js"></script>
-    <script type="text/javascript" src="polyfills.js"></script>
-    <script type="text/javascript" src="styles.js"></script>
-    <script type="text/javascript" src="vendor.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-</body>
+    <app>
+        <div id="incompatible-browser" style="display: none">
+            <h1>Navegador no compatible</h1>
+            <h3>Por favor actualice su navegador. Esta aplicación requiere las últimas características de seguridad.
+            </h3>
+            <br>
+            <h4><a href="https://www.google.com/chrome"><i class="mdi mdi-google-chrome"></i> Google Chrome</a></h4>
+            <h4><a href="https://www.mozilla.org/es-ES/firefox/new/"><i class="mdi mdi-firefox"></i> Mozilla Firefox</a>
+            </h4>
+        </div>
+        <div id="preloader" class="preloader">
+            <div class="loader">
+                <div class="ball-scale-multiple">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </app>
+<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="scripts.js" defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
 
 </html>
