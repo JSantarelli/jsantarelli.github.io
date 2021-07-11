@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Plano interactivo</title>
+</head>
+
+<body class="l-overlay--full">
+
+    <!-- splash -->
+    <section id="bienvenida">
+    </section>
+
+    <!-- hack css para mostrar/ocultar sidebar -->
+    <input id="btnIngreso" type="checkbox" name="btnIngreso" />
+
+    <!-- panel lateral -->
+    <aside id="ingreso" class="panel"></aside>
+
+    <footer>
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script>
+            $(function () {
+                $("#ingreso").load("componentes/ingreso.html");
+                $("#inicio").load("layouts/inicio.html");
+                $("#bienvenida").load("layouts/bienvenida.html");
+            });
+        </script>
+    </footer>
+</body>
+
+</html>

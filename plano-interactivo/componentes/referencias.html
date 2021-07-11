@@ -1,0 +1,127 @@
+<div accordion>
+    <div class="accordion__header">
+        <label for="accordion--00">
+            <h3>Referencias</h3>
+        </label>
+    </div>
+    <input id="accordion--00" type="checkbox" name="accordions">
+    <!-- Primer nivel de info -->
+
+    <!-- Planta baja -->
+    <div class="accordion__content">
+        <label for="plantaBaja">
+            <div class="accordion__header">
+                <h4 class="item__title">Planta baja</h4>
+                <div class="item__botonera">
+                    <label for="accordion--00a">
+                        <i class="icon--24 medical-icon-ophthalmology"></i>
+                    </label>
+                </div>
+            </div>
+        </label>
+        <input id="accordion--00a" type="radio" name="accordions">
+        <div class="accordion__content" id="sectoresPlantaBaja">
+
+        </div>
+    </div>
+
+    <!-- Primer piso -->
+    <div class="accordion__content">
+        <label for="primerPiso">
+            <div class="accordion__header">
+                <h4 class="item__title">Primer piso</h4>
+                <div class="item__botonera">
+                    <label for="accordion--00b">
+                        <i class="icon--24 medical-icon-ophthalmology"></i>
+                    </label>
+                </div>
+            </div>
+        </label>
+        <input id="accordion--00b" type="radio" name="accordions">
+        <div class="accordion__content" id="sectoresPimerPiso">
+
+        </div>
+    </div>
+
+    <!-- Segundo piso -->
+    <div class="accordion__content">
+        <label for="segundoPiso">
+            <div class="accordion__header">
+                <h4 class="item__title">segundo piso</h4>
+                <div class="item__botonera">
+                    <label for="accordion--00c">
+                        <i class="icon--24 medical-icon-ophthalmology"></i>
+                    </label>
+                </div>
+            </div>
+        </label>
+        <input id="accordion--00c" type="radio" name="accordions">
+        <div class="accordion__content" id="sectoresSegundoPiso">
+
+        </div>
+    </div>
+
+    <!-- Tercer piso -->
+    <div class="accordion__content">
+        <label for="tercerPiso">
+            <div class="accordion__header">
+                <h4 class="item__title">tercer piso</h4>
+                <div class="item__botonera">
+                    <label for="accordion--00d">
+                        <i class="icon--24 medical-icon-ophthalmology"></i>
+                    </label>
+                </div>
+            </div>
+        </label>
+        <input id="accordion--00d" type="radio" name="accordions">
+        <div class="accordion__content" id="sectoresTercerPiso">
+
+        </div>
+    </div>
+
+    <!-- Cuarto piso -->
+    <div class="accordion__content">
+        <label for="cuartoPiso">
+            <div class="accordion__header">
+                <h4 class="item__title">cuarto piso</h4>
+                <div class="item__botonera">
+                    <label for="accordion--00e">
+                        <i class="icon--24 medical-icon-ophthalmology"></i>
+                    </label>
+                </div>
+            </div>
+        </label>
+        <input id="accordion--00e" type="radio" name="accordions">
+        <div class="accordion__content" id="sectoresCuartoPiso">
+        </div>
+    </div>
+
+    <!-- Quinto piso -->
+    <div class="accordion__content">
+        <label for="quintoPiso">
+            <div class="accordion__header">
+                <h4 class="item__title">quinto piso</h4>
+                <div class="item__botonera">
+                    <label for="accordion--00f">
+                        <i class="icon--24 medical-icon-ophthalmology"></i>
+                    </label>
+                </div>
+            </div>
+        </label>
+        <input id="accordion--00f" type="radio" name="accordions">
+        <div class="accordion__content" id="sectoresQuintoPiso">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("#sectoresPlantaBaja").load("../_includes/sectoresPlantaBaja.html");
+        $("#sectoresPrimerPiso").load("../_includes/sectoresPrimerPiso.html");
+        $("#sectoresSegundoPiso").load("../_includes/sectoresSegundoPiso.html");
+        $("#sectoresTercerPiso").load("../_includes/sectoresTercerPiso.html");
+        $("#sectoresCuartoPiso").load("../_includes/sectoresCuartoPiso.html");
+        $("#sectoresQuintoPiso").load("../_includes/sectoresQuintoPiso.html");
+    });
+</script>

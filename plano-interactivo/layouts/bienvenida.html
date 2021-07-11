@@ -1,0 +1,57 @@
+<!-- boton flotante ingreso/registro -->
+<button class="btn btn__flotante--der btn--colorPrimario">
+    <label for="btnIngreso">
+        ingresar
+    </label>
+    <i class=""></i>
+</button>
+
+<!-- img fondo -->
+<img src="./../assets/img/isometrica.png" class="img--full" alt="">
+
+<section id="primerScroll" class="panel panel--between">
+    <img src="./../assets/img/hpn-isologo-h.svg" alt="logo del hospital provincial neuquén" width="300">
+    <div class="header__title header__title--center">
+        <h5 class="panel__prefix">ingreso</h5>
+        <h1 class="panel__titulo">Bienvenido</h1>
+        <hr>
+        <p class="panel__bajada">Texto introductorio para el usuario</p>
+        <a href="#segundoScroll">
+            <button class="btn btn--rounded btn--colorSecundario btn--w100">Saber más sobre el hpn</button>
+        </a>
+    </div>
+
+    <!-- Reveer uso de BEM -->
+    <a href="./../layouts/inicio.html">
+        <button class="btn btn--colorTerciario btn__flotante--inf">navegar plano interactivo
+        </button>
+    </a>
+</section>
+
+<!-- Saber mas -->
+<section id="segundoScroll">
+    <section class="panel panel--multiply">
+        <!--<img class="panel__img panel__img--cover" src="./../assets/img/isometrica.png">-->
+        <div class="panel__img--mask"></div>
+        <div class="panel__contenedor--titulo">
+            <span class="panel__prefix">Volanta nota</span>
+            <h1 class="panel__titulo panel__titulo--shadow">Titulo principal de nota a tres lineas</h1>
+            <hr>
+            <h3 class="panel__texto--blanco">Bajda de nota principal a varias lineas. Lorem ipsum sonnet, sigerlet.
+            </h3>
+    </section>
+    <section class="panel panel__contenedor--texto">
+        <div>
+            <span class="panel__subtitulo">Subtitulo</span>
+            <p class="panel__texto" id="demo"></p>
+        </div>
+        <script src="/assets/js/txt.js"></script>
+        <div class="slider">
+            <div class="slider__contenedor">
+                <img class="slider__img" src="./assets/img/hpn-001.jpg">
+                <img class="slider__img" src="./assets/img/hpn-002.jpg">
+                <img class="slider__img" src="./assets/img/hpn-003.jpg">
+            </div>
+        </div>
+    </section>
+</section>

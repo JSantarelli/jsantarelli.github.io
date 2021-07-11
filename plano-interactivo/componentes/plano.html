@@ -1,0 +1,35 @@
+<!-- hack CSS para manipular espacios -->
+<input type="checkbox" id="planta" name="planta">
+<input type="checkbox" id="plantaBaja" name="plantaBaja">
+<input type="checkbox" id="primerPiso" name="primerPiso">
+<input type="checkbox" id="segundoPiso" name="segundoPiso">
+<input type="checkbox" id="tercerPiso" name="tercerPiso">
+<input type="checkbox" id="cuartoPiso" name="cuartoPiso">
+<input type="checkbox" id="quintoPiso" name="quintoPiso">
+<input type="checkbox" id="volumenes" name="volumenes">
+
+<section id="hpn-planta"></section>
+<section id="hpn-desnivel"></section>
+<section id="planta-baja"></section>
+<section id="primer-piso"></section>
+<section id="segundo-piso"></section>
+<section id="tercer-piso"></section>
+<section id="cuarto-piso"></section>
+<section id="quinto-piso"></section>
+<section id="hpn-volumenes"></section>
+
+<script>
+    $(function () {
+        $("#hpn-planta").load("../assets/svg/planta.html");
+        $("#hpn-desnivel").load("../assets/svg/desnivel.html");
+        $("#planta-baja").load("../assets/svg/plantaBaja.html");
+        $("#primer-piso").load("../assets/svg/primerPiso.html");
+        $("#segundo-piso").load("../assets/svg/segundoPiso.html");
+        $("#tercer-piso").load("../assets/svg/tercerPiso.html");
+        $("#cuarto-piso").load("../assets/svg/cuartoPiso.html");
+        $("#quinto-piso").load("../assets/svg/quintoPiso.html");
+        $("#hpn-volumenes").load("../assets/svg/volumenes.html");
+    });
+</script>
+
+<script src="./../assets/js/plano.js"></script>

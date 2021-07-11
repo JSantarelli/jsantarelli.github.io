@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles.css">
+    <title>Plano interactivo</title>
+</head>
+
+<body>
+    <section id="inicio" class="l-standar">
+        <main>
+            <input id="zoomPlano" type="checkbox" name="plano" />
+            <label for="zoomPlano">
+                <button>zoom</button>
+            </label>
+            <section id="plano">
+
+            </section>
+
+            <!-- hack para navegar con css (TODO: en .js o ruteos angular) -->
+            <input id="menuItem01" type="radio" name="radio-group">
+            <input id="menuItem02" type="radio" name="radio-group">
+            <input id="menuItem03" type="radio" name="radio-group">
+            <input id="menuItem04" type="radio" name="radio-group">
+            <input id="menuItem05" type="radio" name="radio-group">
+            <input id="menuItem06" type="radio" name="radio-group">
+            <input id="menuItem07" type="radio" name="radio-group">
+            <input id="menuItem08" type="radio" name="radio-group">
+            <input id="menuItem09" type="radio" name="radio-group">
+
+            <!-- Navegación lateral -->
+            <aside id="barra-lateral">
+
+            </aside>
+
+            <!-- marker flotante -->
+            <section id="marker" class="">
+
+            </section>
+
+            <!-- panel flotante -->
+            <section id="referencias" class="panel panel--white panel--flotante">
+
+            </section>
+
+            <!-- panel lateral desplegable -->
+            <section id="busqueda-resultado" class="sidepanel panel panel--white">
+
+            </section>
+
+            <!-- panel lateral desplegable -->
+            <section id="detalle-espacio" class="sidepanel panel panel--white">
+
+            </section>
+        </main>
+    </section>
+    <script src="/assets/js/jquery-2.2.3.min.js"></script>
+    <script>
+        $(function () {
+            $("#barra-lateral").load("../componentes/barra-lateral.html");
+            $("#detalle-espacio").load("../componentes/detalle-espacio.html");
+            $("#busqueda-resultado").load("../componentes/busqueda-resultado.html");
+            $("#referencias").load("../componentes/referencias.html");
+            $("#marker").load("../componentes/marker.html");
+            $("#plano").load("../componentes/plano.html");
+        });
+    </script>
+</body>
+
+</html>
