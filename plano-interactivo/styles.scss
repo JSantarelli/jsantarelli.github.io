@@ -1,14 +1,35 @@
 @import './assets/scss/normalize';
 @import './assets/scss/layout';
+@import './assets/scss/variables/_responsiveness';
+@import './assets/scss/_funcionalidad';
 @import './assets/scss/variables/_colors.scss';
 @import './assets/css/wfmi-style.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
+
 /* -------------------------------------
 ## BLOQUES / COMPONENTES 
 -------------------------------------*/
-body {
+body, main {
     font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden;
+}
+// Navbar
+.nav {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colorSecundario;
+	padding: 0 1rem 0 0;
+    grid-column: 1 / -1;
+    z-index: 1;
+
+    &.nav--fixed {
+        position: fixed;
+        width: calc(100vw - var(--sidenavWidth) - 20px);
+        z-index: 1;
+    }
 }
 
 // Sidenav
@@ -21,16 +42,32 @@ body {
         flex-direction: row;
         // Styling item
         justify-content: center;
+        align-items: center;
         height: 75px;
         width: 100%;
-                        
+        background-color: $colorPrimario;
+        font-size: 1.35rem;
+        
+        &:not(:first-child) {
+            background-color: transparent;
+            height: 60px;
+            width: 60px;
+            margin: .5rem;
+            font-size: 0.75rem;
+        }
+
         &:first-child {
             background-color: var(--colorPrimario);
         }
                    
-        &:hover {
+        &:hover:not(:first-child) {
             background-color: var(--colorPrimario);
             cursor: pointer;
+            border-radius: 999px;
+            transition: background-color 900ms ease;
+            box-sizing: border-box;
+            margin: .5rem;
+            width: 90%;
         }        
     }
 }
@@ -66,7 +103,27 @@ ul {
 
 .item__icon {
     font-size: 48px;
-    //margin-right: .5rem;
+    margin-right: .5rem;
+}
+
+.item__icon--12 {
+    font-size: 12px;
+}
+
+.item__icon--14 {
+    font-size: 14px;
+}
+
+.item__icon--16 {
+    font-size: 16px;
+}
+
+.item__icon--20 {
+    font-size: 20px;
+}
+
+.item__icon--24 {
+    font-size: 24px;
 }
 
 .item__title {
@@ -103,9 +160,9 @@ img {
 // Plano
 .img__plano {
     position: absolute;
-    top: -10vw;
-    left: 0;
-    width: 100vw;
+    top: -10vh;
+    left: -5vw;
+    width: calc(100vw - var(--sidenavWidth));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +262,7 @@ header {
         justify-content: start;
         top: 5vh;
         left: 5vw;
-        width: 500px;
+        width: 390px;
         box-shadow: 1px 10px 0px -2px rgba(118,118,118,0.75);
     }
 
@@ -386,22 +443,34 @@ table {
 -------------------------------------*/
 
 // Botones
-%base {
-    align-self: center;
-    border-radius: 0px;
-    border: none;
-    box-shadow: none;
+
+.btn__container {
+	display: flex;
+    max-height: 2rem;
+
+    &--column {
+        flex-direction: column;
     }
 
-.container-input-btn {
-	display: flex;
-	flex-direction: row;
-	max-height: 2rem;
+    &--row {
+        flex-direction: row;
+    }
+
+    &--between {
+        justify-content: space-between;
+    }
 }
 
 button {
     &.btn {
-        @extend %base;
+        @mixin baseButton {
+            align-self: center;
+            border-radius: 0px;
+            border: none!important;
+            box-shadow: none!important;
+            }
+        
+        @include baseButton;
 		color: white;
         padding: .25rem .75rem;
         
@@ -485,18 +554,30 @@ button {
             width: fit-content;
         }    
     }
-
     
     // hack css para mostrar/ocultar sidebar
     &.btn__flotante--der {
+        padding: .5rem;
+        position: sticky;
+        height: 40px;
+        top: 20vh;
+        left: 100%;
+        z-index: 1;
+        font-size: .85rem;        
+        text-transform: uppercase;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
+    }
+
+    &.btn__flotante--izq {
         padding: .5rem;
         position: sticky;
         height: 40px;
         top: 10vh;
         left: 100%;
-        z-index: 1;
+        z-index: 1;        
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
 
     &.btn__flotante--inf {
@@ -505,6 +586,8 @@ button {
         left: calc(50% - 100px);
         height: 200px;
         width: 200px;
+        font-size: 1rem;
+        text-transform: uppercase;
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
     }
@@ -512,6 +595,13 @@ button {
 
 // Inputs
 form {
+    %base {
+        align-self: center;
+        border-radius: 0px;
+        border: none;
+        box-shadow: none;
+        }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -524,6 +614,13 @@ form {
         }
     }
 
+    &.form {
+        &--w100 {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
     label {
         font-weight: 900;
         font-size: smaller;
@@ -532,16 +629,44 @@ form {
         margin-bottom: .5rem;
     }
 }
+
 .input__container {
     display: flex;
     flex-direction: column;
-    input {
-        @extend %base;
+    
+    &--column {
+        flex-direction: column;
+    }
+    
+    &--row {
+        flex-direction: row;
+    }
+    
+    &--between {
+        justify-content: space-between;
+    }
+    
+    @mixin baseInput {
         background-color: $celeste;
         color: $azul;
         font-style: italic;
         font-weight: 500;
         padding: .5rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        @include baseInput;
+        border-radius: 12px;
+        min-height: 180px;
+        border: 0!important;
+        box-shadow: none!important;
+    }
+
+    input {
+        @extend %base;
+        @include baseInput;
     
         &.input {
             // --modificadores formales
@@ -557,8 +682,16 @@ form {
                     border-top-left-radius: 50px;
                     border-bottom-left-radius: 50px;
                 }
-        
             }
+
+            &--w50 {
+                width: 50%;
+            }
+
+            &--w75 {
+                width: 75%;
+            }
+
         }
     }
 }
@@ -658,7 +791,7 @@ form {
 
 [class*="icon-i"] {
     border: solid 1px var(--colorTerciario);
-    padding: .25rem;
+    padding: .35rem;
     border-radius: 50%;
 }
 
@@ -674,6 +807,10 @@ form {
 	&--magenta {
 		-webkit-text-fill-color: $magenta;
 	}
+    
+    &--colorPrimario {
+        -webkit-text-fill-color: $colorPrimario;
+    }
 
 	&--colorSecundario {
 		-webkit-text-fill-color: $colorSecundario;
@@ -723,7 +860,8 @@ form {
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
-        border-bottom: solid 1px gray; 
+        border-bottom: solid 1px gray;
+        height: 2.5rem;
     }
 
 	  .accordion__content {
@@ -796,6 +934,14 @@ form {
             cursor: pointer;
         }
     }
+// Dinamico con .js
+    &[top="36.9"] {
+        top: 36.9vh;
+    }
+
+    &[left="33.3"] {
+        left: 33.3vh;
+    }
 
     &[top="25"] {
         top: 25vh;
@@ -841,26 +987,202 @@ input#marker-000:checked ~ div#marker-000 {
     opacity: 1;
 }
 
+// Hack CSS para interacción del marker de servicio
+input#sanitarioMarker001[type="checkbox"],
+path#sanitario001
+{
+    visibility: hidden;
+    opacity: 0;
+}
+
+input#sanitarioMarker001:checked ~ svg>path#sanitario001 {
+    position: absolute;
+    top: -95px;
+    left: 18px;
+    visibility: visible;
+    display: flex;
+    height: min-content;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
 // GALERIA
 .slider {
     --imgHeight: 300px;
     min-height: calc(var(--imgHeight) + 25px);
     width: 100%;
-    overflow-x: scroll;
     overflow-y: hidden;
-
+    
     .slider__contenedor {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-template-rows: 1fr;
-        height: var(--imgHeight);
-        width: 100vw;
-        column-gap: .5rem;
+        @mixin baseImg {
+            height: var(--imgHeight);
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        &--full {
+            --imgHeight: 100%;
             .slider__img {
-                grid-row: 1;
-                height: var(--imgHeight);
-                width: 100%;
-                object-fit: cover;
+                @include baseImg;
             }
+        }
+        
+        &--grid {
+            overflow-x: scroll;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: 1fr;
+            height: var(--imgHeight);
+            width: 100vw;
+            column-gap: .5rem;
+            .slider__img {
+                @include baseImg;
+                grid-row: 1;
+            }
+        }
     }
 }
+
+// TABS
+nav {
+    .nav__tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+
+        .nav__tab {
+            @mixin baseTab {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                height: 75px;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 1rem;
+                padding: 0 1rem; 
+            }
+
+            i.icon {
+                margin-right: .5rem;
+            }
+ 
+            &--filled {
+                @include baseTab;
+                color: white;
+    
+                &:hover {
+                    @include baseTab;
+                    cursor: pointer;
+                    background-color: lighten($colorPrimario, 10%);
+                    color: white;
+                }
+            }
+
+            &--active {
+                @include baseTab;
+                background-color: $colorPrimario;
+                color: white;
+            }
+        }
+
+    }
+}
+
+// CALENDARIO
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    //height: calc(100vh - 75px);
+
+    .calendar__cell {
+        padding: .5rem 1rem;
+        color: var(--colorPrimario);
+        border: solid 1px black;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        font-size: .85rem;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &--active {
+            background-color: lighten($colorSecundario, 50%);
+            border: solid 3px $colorSecundario;
+            box-sizing: border-box;
+        }
+        
+        &:nth-child(n+8) {
+            flex-direction: column;
+            //min-height: 100px;
+            font-size: 1.25rem;
+            padding: 1.5rem;
+            &:hover {
+                cursor: pointer;
+                background-color: lighten($colorSecundario, 50%);
+            }
+            
+            &:focus {
+                background-color: lighten($colorSecundario, 50%);
+                border: solid 3px $colorSecundario;
+                box-sizing: border-box;
+            }
+        }
+
+    }
+}
+
+// CARDS
+.card {
+    display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	justify-content: space-between;
+	align-items: center;
+    min-width: 50%;
+    max-height: 400px;
+	box-shadow: 1px 3px 5px 3px lightgrey;
+	text-align: center;
+
+    .card__img {
+        align-self: center;
+        object-fit: cover;
+        position: relative;
+        display: flex;
+        object-fit: cover;
+    }
+
+    .card__prefix {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .card__title {
+        font-size: 1.5rem;
+    }
+
+    .card__subtitle {
+		font-size: 1rem;
+		font-weight: 400;
+    }
+
+    .card__subtitle--link {
+        background-color: $colorPrimario;
+		border-radius: 50px;
+		color: white;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.25rem;
+		margin-top: 25px;
+		text-transform: uppercase;
+		text-rendering: optimizeLegibility;
+		padding: 0.25rem 0.5rem;
+		width: 100%;
+    }
+}
+

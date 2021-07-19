@@ -336,31 +336,100 @@ aside#ingreso {
   grid-row: 1 / -1; }
 
 .l-standar {
+  --navHeight: 75px;
   --sidenavWidth: 75px;
   --topnavHeight: var(--navHeight);
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(12, 1fr); }
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 2fr; }
   .l-standar aside {
-    position: absolute;
+    grid-column: 2;
+    grid-row: 1;
     right: 0;
     display: flex;
     background-color: #2c4794;
     height: 100%;
     width: var(--sidenavWidth);
     color: white; }
+    .l-standar aside .aside__item__title {
+      font-size: .75rem;
+      display: none;
+      opacity: 0; }
+    .l-standar aside:hover {
+      --sidenavWidth: 200px;
+      width: var(--sidenavWidth);
+      transition: width 900ms ease; }
+      .l-standar aside:hover .sidenav__item {
+        width: 100%;
+        justify-content: start;
+        padding-left: .5rem;
+        padding-right: .5rem; }
+        .l-standar aside:hover .sidenav__item .aside__item__title {
+          margin-left: .5rem;
+          display: inherit;
+          transition: opacity 900ms ease;
+          opacity: 1; }
   .l-standar main {
-    grid-column: 1 / -1;
+    grid-column: 1;
+    grid-row: 1;
     height: 100vh;
     overflow-y: hidden;
     position: relative;
     display: grid;
     grid-template-columns: repeat(6, 1fr); }
+    .l-standar main.dashboard {
+      grid-template-rows: 75px auto auto;
+      grid-template-areas: "nav nav nav nav nav nav" "mn mn mn mn faq faq" "bottom bottom bottom bottom form form"; }
+      .l-standar main.dashboard input[type="radio"] {
+        display: none; }
+      .l-standar main.dashboard .mn {
+        grid-area: mn; }
+      .l-standar main.dashboard .faq {
+        grid-area: faq; }
+      .l-standar main.dashboard .bottom {
+        grid-area: bottom; }
+      .l-standar main.dashboard .form {
+        grid-area: form; }
+    .l-standar main.mapa {
+      --sidenavWidth: 75px;
+      --topnavHeight: var(--navHeight);
+      grid-template-rows: var(--navHeight) 1fr; }
+    .l-standar main.documentos {
+      display: grid;
+      grid-template-rows: 75px auto; }
+      .l-standar main.documentos input[id^="doc"] {
+        display: none; }
+      .l-standar main.documentos > div {
+        grid-column: 1 / -1; }
+        .l-standar main.documentos > div .cards__container {
+          padding: 1.5rem; }
+      .l-standar main.documentos label {
+        width: 100%;
+        cursor: pointer !important;
+        z-index: 0; }
+    .l-standar main.turnos {
+      grid-template-rows: 75px auto auto; }
+      .l-standar main.turnos > div {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 6fr;
+        grid-template-rows: 300px auto; }
+        .l-standar main.turnos > div .cal {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2; }
+        .l-standar main.turnos > div .list {
+          grid-column: 5 / -1;
+          grid-row: 1; }
+        .l-standar main.turnos > div .form {
+          grid-column: 5 / -1;
+          grid-row: 2; }
     .l-standar main > section.sidepanel {
       position: absolute;
       display: flex;
       flex-direction: column;
       margin-top: var(--topnavHeight);
-      right: var(--sidenavWidth);
+      right: 0;
       max-width: 30vw;
       height: calc(100vh - 50px);
       overflow-y: scroll;
@@ -376,6 +445,84 @@ aside#ingreso {
     background-color: gray;
     mix-blend-mode: multiply; }
 
+@media screen and (min-width: 320px) and (max-width: 780px) {
+  header > nav .nav__tab--filled p {
+    display: none !important; }
+
+  main {
+    overflow-y: scroll !important; }
+
+  form {
+    height: 45% !important; }
+
+  section#primerScroll button.btn__flotante--inf {
+    top: calc(100vh - 140px) !important;
+    left: calc(50% - 50px) !important;
+    height: 100px !important;
+    width: 100px !important;
+    font-size: .75rem; }
+
+  .turnos > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr; }
+    .turnos > div .cal {
+      grid-column: 1/-1 !important;
+      grid-row: 1 !important; }
+      .turnos > div .cal .calendar .calendar__cell {
+        padding: .5vw 1vw;
+        font-size: 1.5vw; }
+        .turnos > div .cal .calendar .calendar__cell:nth-child(n+8) {
+          font-size: 5vw;
+          padding: 1.5vw; }
+        .turnos > div .cal .calendar .calendar__cell .badge {
+          display: none !important; }
+    .turnos > div .list {
+      grid-column: 1/-1 !important;
+      grid-row: 2 !important; }
+    .turnos > div .form {
+      grid-column: 1/-1 !important;
+      grid-row: 3 !important; }
+
+  section#segundoScroll {
+    grid-column: 1/-1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 2fr;
+    height: 100vh;
+    border-top: solid 1px gray; }
+    section#segundoScroll #contenedorTitulo {
+      grid-column: 1/-1;
+      grid-row: 1;
+      height: 100vh; }
+    section#segundoScroll #contenedorNota {
+      grid-column: 1 /-1;
+      grid-row: 2;
+      height: 100vh; }
+
+  .l-standar main.dashboard {
+    grid-template-rows: 75px auto auto;
+    grid-template-areas: "nav nav nav nav nav nav" "mn mn mn mn mn mn" "faq faq faq faq faq faq" "bottom bottom bottom bottom bottom bottom" "form form form form form form"; }
+    .l-standar main.dashboard .panel.mn .slider__contenedor--full {
+      --imgHeight: 50vh; }
+      .l-standar main.dashboard .panel.mn .slider__contenedor--full .slider__img {
+        min-width: 200px;
+        width: fit-content;
+        object-fit: cover; }
+
+  .img__plano {
+    position: absolute;
+    top: -10vh;
+    left: -75vw !important;
+    height: 100vh;
+    width: fit-content !important; }
+
+  main.documentos header.panel {
+    flex-direction: column; }
+    main.documentos header.panel > .header__title ~ .btn__container--row {
+      transform: scale(0.65); } }
 section#bienvenida + input[type="checkbox"],
 section#bienvenida ~ aside#ingreso {
   display: none; }
@@ -402,9 +549,13 @@ section#bienvenida ~ aside#ingreso {
   cursor: pointer; }
 
 main > input[type="radio"],
+section#referencias,
 section#busqueda-resultado,
 section#detalle-espacio {
   display: none; }
+
+#menuItem01:checked ~ section#referencias {
+  display: flex; }
 
 #menuItem02:checked ~ section#busqueda-resultado {
   display: flex; }
@@ -412,11 +563,106 @@ section#detalle-espacio {
 #menuItem03:checked ~ section#detalle-espacio {
   display: flex; }
 
+#solicitarTurno {
+  display: block; }
+
+input#btnTurno:checked ~ #solicitarTurno {
+  display: flex; }
+
 /* EXPLOTADA */
+section#servicios-sanitarios {
+  display: none; }
+
+input#serviciosSanitarios:checked ~ section#servicios-sanitarios {
+  display: flex; }
+
+section#hpn-desnivel {
+  opacity: 1; }
+
+input#desnivel:checked ~ section#planta-baja,
+input#desnivel:checked ~ section#primer-piso,
+input#desnivel:checked ~ section#segundo-piso,
+input#desnivel:checked ~ section#tercer-piso,
+input#desnivel:checked ~ section#cuarto-piso,
+input#desnivel:checked ~ section#quinto-piso {
+  opacity: 0.25;
+  pointer-events: none;
+  transition: all 1s ease;
+  filter: grayscale(1); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(9),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(9),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(9),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(9),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(9),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(9) {
+    transform: translateY(-2vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(10),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(10),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(10),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(10),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(10),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(10) {
+    transform: translateY(-7vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(11),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(11),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(11),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(11),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(11),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(11) {
+    transform: translateY(-12vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(12),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(12),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(12),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(12),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(12),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(12) {
+    transform: translateY(-17vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(13),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(13),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(13),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(13),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(13),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(13) {
+    transform: translateY(-22vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(14),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(14),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(14),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(14),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(14),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(14) {
+    transform: translateY(-27vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(15),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(15),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(15),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(15),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(15),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(15) {
+    transform: translateY(-32vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(16),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(16),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(16),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(16),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(16),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(16) {
+    transform: translateY(-37vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(17),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(17),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(17),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(17),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(17),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(17) {
+    transform: translateY(-42vh); }
+  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(18),
+  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(18),
+  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(18),
+  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(18),
+  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(18),
+  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(18) {
+    transform: translateY(-47vh); }
+
 section#planta-baja {
   opacity: 1; }
 
-input#plantaBaja:checked ~ section#hpn-volumenes,
 input#plantaBaja:checked ~ section#hpn-desnivel,
 input#plantaBaja:checked ~ section#primer-piso,
 input#plantaBaja:checked ~ section#segundo-piso,
@@ -424,9 +670,10 @@ input#plantaBaja:checked ~ section#tercer-piso,
 input#plantaBaja:checked ~ section#cuarto-piso,
 input#plantaBaja:checked ~ section#quinto-piso {
   opacity: 0.25;
+  pointer-events: none;
   transition: all 1s ease;
-  filter: grayscale(1); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(9),
+  filter: grayscale(1);
+  z-index: -1; }
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(9),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(9),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(9),
@@ -434,7 +681,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(9),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(9) {
     transform: translateY(-2vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(10),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(10),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(10),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(10),
@@ -442,7 +688,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(10),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(10) {
     transform: translateY(-7vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(11),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(11),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(11),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(11),
@@ -450,7 +695,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(11),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(11) {
     transform: translateY(-12vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(12),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(12),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(12),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(12),
@@ -458,7 +702,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(12),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(12) {
     transform: translateY(-17vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(13),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(13),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(13),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(13),
@@ -466,7 +709,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(13),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(13) {
     transform: translateY(-22vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(14),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(14),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(14),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(14),
@@ -474,7 +716,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(14),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(14) {
     transform: translateY(-27vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(15),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(15),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(15),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(15),
@@ -482,7 +723,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(15),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(15) {
     transform: translateY(-32vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(16),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(16),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(16),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(16),
@@ -490,7 +730,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(16),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(16) {
     transform: translateY(-37vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(17),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(17),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(17),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(17),
@@ -498,7 +737,6 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(17),
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(17) {
     transform: translateY(-42vh); }
-  input#plantaBaja:checked ~ section#hpn-volumenes:not(#hpn-desnivel):nth-child(18),
   input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(18),
   input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(18),
   input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(18),
@@ -507,10 +745,18 @@ input#plantaBaja:checked ~ section#quinto-piso {
   input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(18) {
     transform: translateY(-47vh); }
 
+section#servicios-asistenciales {
+  display: none; }
+
+input#plantaBaja:checked ~ section#servicios-asistenciales {
+  display: flex;
+  z-index: 0; }
+input#plantaBaja:checked ~ section#servicios-sanitarios {
+  z-index: -1; }
+
 section#primer-piso {
   opacity: 1; }
 
-input#primerPiso:checked ~ section#hpn-volumenes,
 input#primerPiso:checked ~ section#hpn-desnivel,
 input#primerPiso:checked ~ section#planta-baja,
 input#primerPiso:checked ~ section#segundo-piso,
@@ -518,9 +764,9 @@ input#primerPiso:checked ~ section#tercer-piso,
 input#primerPiso:checked ~ section#cuarto-piso,
 input#primerPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
+  pointer-events: none;
   transition: all 1s ease;
   filter: grayscale(1); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(9),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(9),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(9),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
@@ -528,7 +774,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(9) {
     transform: translateY(-2vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(10),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(10),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(10),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
@@ -536,7 +781,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(10) {
     transform: translateY(-7vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(11),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(11),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(11),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
@@ -544,7 +788,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(11) {
     transform: translateY(-12vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(12),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(12),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(12),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
@@ -552,7 +795,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(12) {
     transform: translateY(-17vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(13),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(13),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(13),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
@@ -560,7 +802,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(13) {
     transform: translateY(-22vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(14),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(14),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(14),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
@@ -568,7 +809,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(14) {
     transform: translateY(-27vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(15),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(15),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(15),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
@@ -576,7 +816,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(15) {
     transform: translateY(-32vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(16),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(16),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(16),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
@@ -584,7 +823,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(16) {
     transform: translateY(-37vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(17),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(17),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(17),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
@@ -592,7 +830,6 @@ input#primerPiso:checked ~ section#quinto-piso {
   input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
   input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(17) {
     transform: translateY(-42vh); }
-  input#primerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja):nth-child(18),
   input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(18),
   input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(18),
   input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(18),
@@ -604,7 +841,6 @@ input#primerPiso:checked ~ section#quinto-piso {
 section#segundo-piso {
   opacity: 1; }
 
-input#segundoPiso:checked ~ section#hpn-volumenes,
 input#segundoPiso:checked ~ section#hpn-desnivel,
 input#segundoPiso:checked ~ section#planta-baja,
 input#segundoPiso:checked ~ section#primer-piso,
@@ -612,9 +848,9 @@ input#segundoPiso:checked ~ section#tercer-piso,
 input#segundoPiso:checked ~ section#cuarto-piso,
 input#segundoPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
+  pointer-events: none;
   transition: all 1s ease;
   filter: grayscale(1); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
@@ -622,7 +858,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9) {
     transform: translateY(-2vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
@@ -630,7 +865,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10) {
     transform: translateY(-7vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
@@ -638,7 +872,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11) {
     transform: translateY(-12vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
@@ -646,7 +879,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12) {
     transform: translateY(-17vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
@@ -654,7 +886,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13) {
     transform: translateY(-22vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
@@ -662,7 +893,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14) {
     transform: translateY(-27vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
@@ -670,7 +900,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15) {
     transform: translateY(-32vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
@@ -678,7 +907,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16) {
     transform: translateY(-37vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
@@ -686,7 +914,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
   input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
   input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17) {
     transform: translateY(-42vh); }
-  input#segundoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
   input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
   input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
   input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
@@ -698,7 +925,6 @@ input#segundoPiso:checked ~ section#quinto-piso {
 section#tercer-piso {
   opacity: 1; }
 
-input#tercerPiso:checked ~ section#hpn-volumenes,
 input#tercerPiso:checked ~ section#hpn-desnivel,
 input#tercerPiso:checked ~ section#planta-baja,
 input#tercerPiso:checked ~ section#primer-piso,
@@ -706,9 +932,9 @@ input#tercerPiso:checked ~ section#segundo-piso,
 input#tercerPiso:checked ~ section#cuarto-piso,
 input#tercerPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
+  pointer-events: none;
   transition: all 1s ease;
   filter: grayscale(1); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
@@ -716,7 +942,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9) {
     transform: translateY(-2vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
@@ -724,7 +949,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10) {
     transform: translateY(-7vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
@@ -732,7 +956,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11) {
     transform: translateY(-12vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
@@ -740,7 +963,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12) {
     transform: translateY(-17vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
@@ -748,7 +970,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13) {
     transform: translateY(-22vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
@@ -756,7 +977,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14) {
     transform: translateY(-27vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
@@ -764,7 +984,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15) {
     transform: translateY(-32vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
@@ -772,7 +991,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16) {
     transform: translateY(-37vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
@@ -780,7 +998,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
   input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
   input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17) {
     transform: translateY(-42vh); }
-  input#tercerPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
   input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
   input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
   input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
@@ -792,7 +1009,6 @@ input#tercerPiso:checked ~ section#quinto-piso {
 section#cuarto-piso {
   opacity: 1; }
 
-input#cuartoPiso:checked ~ section#hpn-volumenes,
 input#cuartoPiso:checked ~ section#hpn-desnivel,
 input#cuartoPiso:checked ~ section#planta-baja,
 input#cuartoPiso:checked ~ section#primer-piso,
@@ -800,9 +1016,9 @@ input#cuartoPiso:checked ~ section#segundo-piso,
 input#cuartoPiso:checked ~ section#tercer-piso,
 input#cuartoPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
+  pointer-events: none;
   transition: all 1s ease;
   filter: grayscale(1); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
@@ -810,7 +1026,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9) {
     transform: translateY(-2vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
@@ -818,7 +1033,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10) {
     transform: translateY(-7vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
@@ -826,7 +1040,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11) {
     transform: translateY(-12vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
@@ -834,7 +1047,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12) {
     transform: translateY(-17vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
@@ -842,7 +1054,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13) {
     transform: translateY(-22vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
@@ -850,7 +1061,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14) {
     transform: translateY(-27vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
@@ -858,7 +1068,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15) {
     transform: translateY(-32vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
@@ -866,7 +1075,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16) {
     transform: translateY(-37vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
@@ -874,7 +1082,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
   input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17) {
     transform: translateY(-42vh); }
-  input#cuartoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
   input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
   input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
   input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
@@ -886,7 +1093,6 @@ input#cuartoPiso:checked ~ section#quinto-piso {
 section#quinto-piso {
   opacity: 1; }
 
-input#quintoPiso:checked ~ section#hpn-volumenes,
 input#quintoPiso:checked ~ section#hpn-desnivel,
 input#quintoPiso:checked ~ section#planta-baja,
 input#quintoPiso:checked ~ section#primer-piso,
@@ -894,9 +1100,9 @@ input#quintoPiso:checked ~ section#segundo-piso,
 input#quintoPiso:checked ~ section#tercer-piso,
 input#quintoPiso:checked ~ section#cuarto-piso {
   opacity: 0.25;
+  pointer-events: none;
   transition: all 1s ease;
   filter: grayscale(1); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
@@ -904,7 +1110,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9) {
     transform: translateY(-2vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
@@ -912,7 +1117,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10) {
     transform: translateY(-7vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
@@ -920,7 +1124,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11) {
     transform: translateY(-12vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
@@ -928,7 +1131,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12) {
     transform: translateY(-17vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
@@ -936,7 +1138,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13) {
     transform: translateY(-22vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
@@ -944,7 +1145,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14) {
     transform: translateY(-27vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
@@ -952,7 +1152,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15) {
     transform: translateY(-32vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
@@ -960,7 +1159,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16) {
     transform: translateY(-37vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
@@ -968,7 +1166,6 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17) {
     transform: translateY(-42vh); }
-  input#quintoPiso:checked ~ section#hpn-volumenes:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
   input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
   input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
   input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
@@ -979,7 +1176,8 @@ input#quintoPiso:checked ~ section#cuarto-piso {
 
 input#zoomPlano {
   z-index: 1;
-  position: inherit; }
+  position: inherit;
+  display: block; }
 
 section#plano {
   position: absolute;
@@ -987,8 +1185,34 @@ section#plano {
   transition: transform 1s ease-in; }
 
 input#zoomPlano:checked ~ section#plano {
-  transform: scale(2.5) translateX(-10vw) translateY(-5vw);
+  transform: scale(1.75) translateX(-5vw) translateY(-20vw);
   transition: transform 1s ease-in; }
+  input#zoomPlano:checked ~ section#plano #marker-000 {
+    transform: scale(0.5);
+    transition: transform 1s ease-in; }
+
+section[class^="doc"] {
+  display: none; }
+
+input#doc1:checked ~ section.doc1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: .5rem; }
+
+input#doc2:checked ~ section.doc2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: .5rem; }
+
+input#doc3:checked ~ section.doc3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: .5rem; }
+
+input#doc4:checked ~ section.doc4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: .5rem; }
 
 /*--------------------------------------------------------------
 # HPN - Colores
@@ -997,8 +1221,23 @@ input#zoomPlano:checked ~ section#plano {
 /* -------------------------------------
 ## BLOQUES / COMPONENTES 
 -------------------------------------*/
-body {
-  font-family: 'Source Sans Pro', sans-serif; }
+body, main {
+  font-family: 'Source Sans Pro', sans-serif;
+  overflow-x: hidden; }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00a1df;
+  padding: 0 1rem 0 0;
+  grid-column: 1 / -1;
+  z-index: 1; }
+  .nav.nav--fixed {
+    position: fixed;
+    width: calc(100vw - var(--sidenavWidth) - 20px);
+    z-index: 1; }
 
 .sidenav {
   --colorPrimario: #243163;
@@ -1007,13 +1246,27 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     height: 75px;
-    width: 100%; }
+    width: 100%;
+    background-color: #243163;
+    font-size: 1.35rem; }
+    .sidenav .sidenav__item:not(:first-child) {
+      background-color: transparent;
+      height: 60px;
+      width: 60px;
+      margin: .5rem;
+      font-size: 0.75rem; }
     .sidenav .sidenav__item:first-child {
       background-color: var(--colorPrimario); }
-    .sidenav .sidenav__item:hover {
+    .sidenav .sidenav__item:hover:not(:first-child) {
       background-color: var(--colorPrimario);
-      cursor: pointer; }
+      cursor: pointer;
+      border-radius: 999px;
+      transition: background-color 900ms ease;
+      box-sizing: border-box;
+      margin: .5rem;
+      width: 90%; }
 
 ul.list {
   width: 100%; }
@@ -1035,7 +1288,23 @@ ul.list {
     overflow: hidden; }
 
 .item__icon {
-  font-size: 48px; }
+  font-size: 48px;
+  margin-right: .5rem; }
+
+.item__icon--12 {
+  font-size: 12px; }
+
+.item__icon--14 {
+  font-size: 14px; }
+
+.item__icon--16 {
+  font-size: 16px; }
+
+.item__icon--20 {
+  font-size: 20px; }
+
+.item__icon--24 {
+  font-size: 24px; }
 
 .item__title {
   text-align: left;
@@ -1059,9 +1328,9 @@ img.img--half {
 
 .img__plano {
   position: absolute;
-  top: -10vw;
-  left: 0;
-  width: 100vw;
+  top: -10vh;
+  left: -5vw;
+  width: calc(100vw - var(--sidenavWidth));
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -1132,7 +1401,7 @@ header {
     justify-content: start;
     top: 5vh;
     left: 5vw;
-    width: 500px;
+    width: 390px;
     box-shadow: 1px 10px 0px -2px rgba(118, 118, 118, 0.75); }
   .panel.panel--start {
     flex-direction: column;
@@ -1241,18 +1510,21 @@ table {
 /* -------------------------------------
 ## ELEMENTOS
 -------------------------------------*/
-button.btn, .input__container input {
-  align-self: center;
-  border-radius: 0px;
-  border: none;
-  box-shadow: none; }
-
-.container-input-btn {
+.btn__container {
   display: flex;
-  flex-direction: row;
   max-height: 2rem; }
+  .btn__container--column {
+    flex-direction: column; }
+  .btn__container--row {
+    flex-direction: row; }
+  .btn__container--between {
+    justify-content: space-between; }
 
 button.btn {
+  align-self: center;
+  border-radius: 0px;
+  border: none !important;
+  box-shadow: none !important;
   color: white;
   padding: .25rem .75rem; }
   button.btn:active {
@@ -1297,20 +1569,33 @@ button.btn {
   button.btn--xxl {
     width: fit-content; }
 button.btn__flotante--der {
+  padding: .5rem;
+  position: sticky;
+  height: 40px;
+  top: 20vh;
+  left: 100%;
+  z-index: 1;
+  font-size: .85rem;
+  text-transform: uppercase;
   border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-bottom-left-radius: 25px; }
+button.btn__flotante--izq {
   padding: .5rem;
   position: sticky;
   height: 40px;
   top: 10vh;
   left: 100%;
-  z-index: 1; }
+  z-index: 1;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px; }
 button.btn__flotante--inf {
   position: absolute;
   top: calc(100vh - 200px);
   left: calc(50% - 100px);
   height: 200px;
   width: 200px;
+  font-size: 1rem;
+  text-transform: uppercase;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%; }
 
@@ -1320,8 +1605,16 @@ form {
   justify-content: space-between;
   align-self: center;
   height: 35%; }
+  form .input__container input, .input__container form input {
+    align-self: center;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none; }
   form.form--w50 {
     width: 50%; }
+  form.form--w100 {
+    height: 100%;
+    width: 100%; }
   form label {
     font-weight: 900;
     font-size: smaller;
@@ -1331,12 +1624,32 @@ form {
 .input__container {
   display: flex;
   flex-direction: column; }
+  .input__container--column {
+    flex-direction: column; }
+  .input__container--row {
+    flex-direction: row; }
+  .input__container--between {
+    justify-content: space-between; }
+  .input__container textarea {
+    background-color: #84cef0;
+    color: #2c4794;
+    font-style: italic;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    min-height: 180px;
+    border: 0 !important;
+    box-shadow: none !important; }
   .input__container input {
     background-color: #84cef0;
     color: #2c4794;
     font-style: italic;
     font-weight: 500;
-    padding: .5rem 1rem; }
+    padding: .5rem 1rem;
+    width: 100%;
+    box-sizing: border-box; }
     .input__container input.input--rounded {
       border-radius: 50px; }
       .input__container input.input--rounded-right {
@@ -1345,6 +1658,10 @@ form {
       .input__container input.input--rounded-left {
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px; }
+    .input__container input.input--w50 {
+      width: 50%; }
+    .input__container input.input--w75 {
+      width: 75%; }
 
 .container-badges {
   display: flex;
@@ -1402,7 +1719,7 @@ form {
 
 [class*="icon-i"] {
   border: solid 1px var(--colorTerciario);
-  padding: .25rem;
+  padding: .35rem;
   border-radius: 50%; }
 
 .icon {
@@ -1411,6 +1728,8 @@ form {
     font-size: 24px; }
   .icon--magenta {
     -webkit-text-fill-color: #e3007e; }
+  .icon--colorPrimario {
+    -webkit-text-fill-color: #243163; }
   .icon--colorSecundario {
     -webkit-text-fill-color: #00a1df; }
   .icon--colorTerciario {
@@ -1446,7 +1765,8 @@ form {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    border-bottom: solid 1px gray; }
+    border-bottom: solid 1px gray;
+    height: 2.5rem; }
   [accordion] .accordion__content {
     max-height: 0;
     overflow: hidden;
@@ -1497,6 +1817,10 @@ form {
     font-size: 24px; }
     .panel__marker > i:hover {
       cursor: pointer; }
+  .panel__marker[top="36.9"] {
+    top: 36.9vh; }
+  .panel__marker[left="33.3"] {
+    left: 33.3vh; }
   .panel__marker[top="25"] {
     top: 25vh; }
   .panel__marker[left="25"] {
@@ -1525,23 +1849,159 @@ input#marker-000:checked ~ div#marker-000 {
   transition: opacity 1s ease-in-out;
   opacity: 1; }
 
+input#sanitarioMarker001[type="checkbox"],
+path#sanitario001 {
+  visibility: hidden;
+  opacity: 0; }
+
+input#sanitarioMarker001:checked ~ svg > path#sanitario001 {
+  position: absolute;
+  top: -95px;
+  left: 18px;
+  visibility: visible;
+  display: flex;
+  height: min-content;
+  transition: opacity 1s ease-in-out;
+  opacity: 1; }
+
 .slider {
   --imgHeight: 300px;
   min-height: calc(var(--imgHeight) + 25px);
   width: 100%;
-  overflow-x: scroll;
   overflow-y: hidden; }
-  .slider .slider__contenedor {
+  .slider .slider__contenedor--full {
+    --imgHeight: 100%; }
+    .slider .slider__contenedor--full .slider__img {
+      height: var(--imgHeight);
+      width: 100%;
+      object-fit: cover; }
+  .slider .slider__contenedor--grid {
+    overflow-x: scroll;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: 1fr;
     height: var(--imgHeight);
     width: 100vw;
     column-gap: .5rem; }
-    .slider .slider__contenedor .slider__img {
-      grid-row: 1;
+    .slider .slider__contenedor--grid .slider__img {
       height: var(--imgHeight);
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      grid-row: 1; }
+
+nav .nav__tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: start; }
+  nav .nav__tabs .nav__tab i.icon {
+    margin-right: .5rem; }
+  nav .nav__tabs .nav__tab--filled {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 75px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 1rem;
+    color: white; }
+    nav .nav__tabs .nav__tab--filled:hover {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      height: 75px;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1rem;
+      padding: 0 1rem;
+      cursor: pointer;
+      background-color: #324488;
+      color: white; }
+  nav .nav__tabs .nav__tab--active {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 75px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 1rem;
+    background-color: #243163;
+    color: white; }
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100%; }
+  .calendar .calendar__cell {
+    padding: .5rem 1rem;
+    color: var(--colorPrimario);
+    border: solid 1px black;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: .85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .calendar .calendar__cell--active {
+      background-color: #dff6ff;
+      border: solid 3px #00a1df;
+      box-sizing: border-box; }
+    .calendar .calendar__cell:nth-child(n+8) {
+      flex-direction: column;
+      font-size: 1.25rem;
+      padding: 1.5rem; }
+      .calendar .calendar__cell:nth-child(n+8):hover {
+        cursor: pointer;
+        background-color: #dff6ff; }
+      .calendar .calendar__cell:nth-child(n+8):focus {
+        background-color: #dff6ff;
+        border: solid 3px #00a1df;
+        box-sizing: border-box; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 50%;
+  max-height: 400px;
+  box-shadow: 1px 3px 5px 3px lightgrey;
+  text-align: center; }
+  .card .card__img {
+    align-self: center;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+    object-fit: cover; }
+  .card .card__prefix {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .card .card__title {
+    font-size: 1.5rem; }
+  .card .card__subtitle {
+    font-size: 1rem;
+    font-weight: 400; }
+  .card .card__subtitle--link {
+    background-color: #243163;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin-top: 25px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    padding: 0.25rem 0.5rem;
+    width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

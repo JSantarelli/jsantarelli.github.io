@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles.css">
+    <title>Plano interactivo</title>
+</head>
+
+<body>
+
+    <section id="turnos" class="l-standar">
+        <main class="turnos">
+            <header class="nav">
+                <nav>
+                    <ul role="tablist" class="nav__tabs">
+                        <a href="./../index.html">
+                            <li role="tab" class="nav__tab--filled tab1">
+                                <i class="icon medical-icon-i-care-staff-area"></i>
+                                <p>Inicio</p>
+                            </li>
+                        </a>
+                        <a href="./dashboard.html">
+                            <li role="tab" class="nav__tab--filled tab1">
+                                <i class="icon medical-icon-i-interpreter-services"></i>
+                                <p>Mi sesión</p>
+                            </li>
+                        </a>
+                        <a href="./documentos.html">
+                            <li class="nav__tab--filled tab2">
+                                <i class="icon medical-icon-i-administration"></i>
+                                <p>Mi documentación</p>
+
+                            </li>
+                        </a>
+                        <a href="./turnos.html">
+                            <li class="nav__tab--filled nav__tab--active tab3">
+                                <i class="icon medical-icon-i-cardiology"></i>
+                                <p>Mis turnos</p>
+                            </li>
+                        </a>
+                        <a href="./inicio.html">
+                            <li class="nav__tab--filled tab3">
+                                <i class="icon medical-icon-i-gift-shop"></i>
+                                <p>Mi mapa HPN</p>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="input__container">
+                    <input type="search" class="input--rounded"></input>
+                </div>
+            </header>
+
+            <div>
+                <section class="cal panel panel--start">
+                    <header>
+                        <div class="header__title">
+                            <h5 class="panel__prefix">Mis turnos</h5>
+                            <h2 class="panel__titulo">Mi calendario</h2>
+                            <hr>
+                            </hr>
+                        </div>
+                    </header>
+                    <div class="calendar">
+
+                        <div class="calendar__cell">
+                            Domingo
+                        </div>
+                        <div class="calendar__cell">
+                            Lunes
+                        </div>
+                        <div class="calendar__cell">
+                            Martes
+                        </div>
+                        <div class="calendar__cell">
+                            Miércoles
+                        </div>
+                        <div class="calendar__cell">
+                            Jueves
+                        </div>
+                        <div class="calendar__cell">
+                            Viernes
+                        </div>
+                        <div class="calendar__cell">
+                            Sábado
+                        </div>
+                        <div class="calendar__cell">
+                            1
+                        </div>
+                        <div class="calendar__cell">
+                            2
+                        </div>
+                        <div class="calendar__cell">
+                            3
+                        </div>
+                        <div class="calendar__cell">
+                            4
+                        </div>
+                        <div class="calendar__cell">
+                            5
+                        </div>
+                        <div class="calendar__cell">
+                            6
+                        </div>
+                        <div class="calendar__cell">
+                            7
+                        </div>
+                        <div class="calendar__cell">
+                            8
+                        </div>
+                        <div class="calendar__cell">
+                            9
+                        </div>
+                        <div class="calendar__cell">
+                            10
+                        </div>
+                        <div class="calendar__cell">
+                            11
+                        </div>
+                        <div class="calendar__cell">
+                            12
+                        </div>
+                        <div class="calendar__cell">
+                            13
+                        </div>
+                        <div class="calendar__cell">
+                            14
+                        </div>
+                        <div class="calendar__cell">
+                            15
+                        </div>
+                        <div class="calendar__cell">
+                            16
+                        </div>
+                        <div class="calendar__cell calendar__cell--active">
+                            17
+                            <span class="badge badge--outline">Radiología</span>
+                        </div>
+                        <div class="calendar__cell">
+                            18
+                        </div>
+                        <div class="calendar__cell">
+                            19
+                        </div>
+                        <div class="calendar__cell">
+                            20
+                        </div>
+                        <div class="calendar__cell">
+                            21
+                        </div>
+                        <div class="calendar__cell">
+                            22
+                        </div>
+                        <div class="calendar__cell">
+                            23
+                        </div>
+                        <div class="calendar__cell">
+                            24
+                        </div>
+                        <div class="calendar__cell">
+                            25
+                        </div>
+                        <div class="calendar__cell">
+                            26
+                        </div>
+                        <div class="calendar__cell">
+                            27
+                        </div>
+                        <div class="calendar__cell">
+                            28
+                        </div>
+                        <div class="calendar__cell">
+                            29
+                        </div>
+                        <div class="calendar__cell">
+                            30
+                        </div>
+                        <div class="calendar__cell calendar__cell--active">
+                            31
+                            <span class="badge badge--outline">Radiología</span>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="list panel panel--start">
+                    <header>
+                        <div class="header__title">
+                            <h5 class="panel__prefix">Mis turnos</h5>
+                            <h2 class="panel__titulo">Mi listado de turnos</h2>
+                            <hr>
+                            </hr>
+                        </div>
+                    </header>
+
+                    <!-- Listado de turnos -->
+                    <div class="item">
+                        <div class="item__container" left>
+                            <i class="item__icon item__icon--24 icon icon--magenta medical-icon-i-respiratory"></i>
+                            <span class="icon-container icon-container--vertical">
+                                <h4 class="item__title">
+                                    Fecha destacada
+                                </h4>
+                                <small class="item__subtitle">
+                                    Información la fecha destacada
+                                </small>
+                            </span>
+                        </div>
+                        <div class="item__botonera">
+                            <span class="badge badge--outline">eitqueta</span>
+                            <button class="btn btn--rounded btn--colorSecundario">ver detalle</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__container" left>
+                            <i class="item__icon item__icon--24 icon icon--magenta medical-icon-i-respiratory"></i>
+                            <span class="icon-container icon-container--vertical">
+                                <h4 class="item__title">
+                                    Fecha destacada
+                                </h4>
+                                <small class="item__subtitle">
+                                    Información la fecha destacada
+                                </small>
+                            </span>
+                        </div>
+                        <div class="item__botonera">
+                            <span class="badge badge--outline">eitqueta</span>
+                            <button class="btn btn--rounded btn--colorSecundario">ver detalle</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__container" left>
+                            <i class="item__icon item__icon--24 icon icon--magenta medical-icon-i-respiratory"></i>
+                            <span class="icon-container icon-container--vertical">
+                                <h4 class="item__title">
+                                    Fecha destacada
+                                </h4>
+                                <small class="item__subtitle">
+                                    Información la fecha destacada
+                                </small>
+                            </span>
+                        </div>
+                        <div class="item__botonera">
+                            <span class="badge badge--outline">eitqueta</span>
+                            <button class="btn btn--rounded btn--colorSecundario">ver detalle</button>
+                        </div>
+                    </div>
+                </section>
+                <section id="solicitarTurno" class="form panel panel--white panel--start">
+                    <!--<input id="btnTurno" type="checkbox" name="btnTurno">-->
+                    <div class="header__title">
+                        <h5 class="panel__prefix">Vias de comunicación</h5>
+                        <h2 class="panel__titulo">
+                            Formulario de contacto
+                        </h2>
+                        <hr>
+                    </div>
+                    <form class="form--w100">
+                        <div class="input__container">
+                            <div class="input__container">
+                                <label for="usuario">Asunto</label>
+                                <input type="text" class="input--rounded">
+                            </div>
+                        </div>
+                        <div class="input__container">
+                            <label for="pass">Mensaje</label>
+                            <textarea multiline="true" type="password" class="input--rounded"></textarea>
+                        </div>
+                        <div class="btn__container btn__container--row btn__container--between">
+                            <button class="btn btn--rounded btn--colorTerciario btn--w50">cancelar</button>
+                            <button class="btn btn--rounded btn--colorSecundario btn--w50">enviar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <aside id="barra-lateral">
+            <ul class="sidenav">
+                <a href="./../index.html">
+                    <li class="sidenav__item">
+                        <label for="menuItem00"></label>
+                        <img class="icon" src="./../assets/img/hpn-logo.svg" alt="" width="35">
+                        <h5 class="aside__item__title">Hospital Provincial Neuquén</h5>
+                    </li>
+                </a>
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem01">
+                        <i class="icon icon--24 medical-icon-i-medical-records"></i>
+                        <p class="aside__item__title">Referencias</p>
+                    </label>
+                </li>
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem02">
+                        <i class="icon icon--24 medical-icon-i-registration"></i>
+                        <p class="aside__item__title">Listado de espacios</p>
+                    </label>
+                </li>
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem03">
+                        <i class="icon icon--24 medical-icon-i-administration"></i>
+                        <p class="aside__item__title">Detalle espacio</p>
+                    </label>
+                </li>
+                <li class="sidenav__item"></li>
+                <li class="sidenav__item"></li>
+                <li class="sidenav__item"></li>
+                <li class="sidenav__item"></li>
+                <!--<a href="./../index.html">-->
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem06">
+                        <i class="icon icon--24 icon--magenta medical-icon-i-ambulance"></i>
+                        <p class="aside__item__title">Cerrar sesión</p>
+                    </label>
+                </li>
+                <!--</a>-->
+            </ul>
+        </aside>
+    </section>
+</body>
+
+</html>

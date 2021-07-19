@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles.css">
+    <title>Plano interactivo</title>
+</head>
+
+<body>
+    <section class="l-standar">
+        <main class="documentos">
+            <header class="nav">
+                <nav>
+                    <ul role="tablist" class="nav__tabs">
+                        <a href="./../index.html">
+                            <li role="tab" class="nav__tab--filled tab1">
+                                <i class="icon medical-icon-i-care-staff-area"></i>
+                                <p>Inicio</p>
+                            </li>
+                        </a>
+                        <a href="./dashboard.html">
+                            <li role="tab" class="nav__tab--filled tab1">
+                                <i class="icon medical-icon-i-interpreter-services"></i>
+                                <p>Mi sesión</p>
+                            </li>
+                        </a>
+                        <a href="./documentos.html">
+                            <li class="nav__tab--filled nav__tab--active tab2">
+                                <i class="icon medical-icon-i-administration"></i>
+                                <p>Mi documentación</p>
+
+                            </li>
+                        </a>
+                        <a href="./turnos.html">
+                            <li class="nav__tab--filled tab3">
+                                <i class="icon medical-icon-i-cardiology"></i>
+                                <p>Mis turnos</p>
+                            </li>
+                        </a>
+                        <a href="./inicio.html">
+                            <li class="nav__tab--filled tab3">
+                                <i class="icon medical-icon-i-gift-shop"></i>
+                                <p>Mi mapa HPN</p>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="input__container">
+                    <input type="search" class="input--rounded"></input>
+                </div>
+            </header>
+            <!-- Botonera documentos -->
+            <div>
+                <header class="panel">
+                    <div class="header__title">
+                        <h5 class="panel__prefix">Volanta</h5>
+                        <h1 class="panel__titulo">
+                            Mi documentación
+                        </h1>
+                        <hr>
+                        </hr>
+                        <h5 class="panel__bajada">
+                            <!--the_content();-->
+                        </h5>
+                    </div>
+                    <!-- Filtros -->
+                    <div class="btn__container btn__container--row">
+
+                        <button class="btn btn--colorTerciario">
+                            <label for="doc1">Administrativa
+                            </label>
+                        </button>
+
+                        <button class="btn btn--colorTerciario">
+                            <label for="doc2">
+                                Resultados
+                            </label></button>
+
+                        <button class="btn btn--colorTerciario">
+                            <label for="doc3">
+                                Informes
+                            </label>
+                        </button>
+                        <button class="btn btn--colorTerciario">
+                            <label for="doc4">
+                                Recetas
+                            </label>
+                        </button>
+                    </div>
+                </header>
+
+                <input id="doc1" type="radio" name="docs" checked />
+                <input id="doc2" type="radio" name="docs" />
+                <input id="doc3" type="radio" name="docs" />
+                <input id="doc4" type="radio" name="docs" />
+                <section class="doc1 cards__container">
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-01.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-02.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-03.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-04.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+
+                </section>
+
+                <section class="doc2 cards__container">
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-05.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-06.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-07.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                </section>
+
+                <section class="doc3 cards__container">
+                    <p>No hay fichas disponibles</p>
+                </section>
+
+                <section class="doc4 cards__container">
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-01.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                    <div class="card">
+                        <img width="135" height="182" src="./../assets/img/doc-02.jpg" class="card__img" alt="">
+                        <div class="badge badge--colorSecundario">categoria</div>
+                        <h5 class="card__title">Titulo del documento</h5>
+                        <hr class="">
+                        <p class="card__subtitle">Descripcion</p>
+                        <a href="" class="card__subtitle--link">compartir</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <aside id="barra-lateral">
+            <ul class="sidenav">
+                <a href="./../index.html">
+                    <li class="sidenav__item">
+                        <label for="menuItem00"></label>
+                        <img class="icon" src="./../assets/img/hpn-logo.svg" alt="" width="35">
+                        <h5 class="aside__item__title">Hospital Provincial Neuquén</h5>
+                    </li>
+                </a>
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem01">
+                        <i class="icon icon--24 medical-icon-i-medical-records"></i>
+                        <p class="aside__item__title">Referencias</p>
+                    </label>
+                </li>
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem02">
+                        <i class="icon icon--24 medical-icon-i-registration"></i>
+                        <p class="aside__item__title">Listado de espacios</p>
+                    </label>
+                </li>
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem03">
+                        <i class="icon icon--24 medical-icon-i-administration"></i>
+                        <p class="aside__item__title">Detalle espacio</p>
+                    </label>
+                </li>
+                <li class="sidenav__item"></li>
+                <li class="sidenav__item"></li>
+                <li class="sidenav__item"></li>
+                <li class="sidenav__item"></li>
+                <!--<a href="./../index.html">-->
+                <li class="sidenav__item">
+                    <label class="item__label" for="menuItem06">
+                        <i class="icon icon--24 icon--magenta medical-icon-i-ambulance"></i>
+                        <p class="aside__item__title">Cerrar sesión</p>
+                    </label>
+                </li>
+                <!--</a>-->
+            </ul>
+        </aside>
+</body>
+
+</html>
