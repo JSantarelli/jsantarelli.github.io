@@ -19,6 +19,12 @@
             width: 100px!important;
             font-size: .75rem;
         }
+
+        img {
+            &.logo--desktop {
+                display: none;
+            }
+        }
     }
 
     .turnos {
@@ -107,7 +113,6 @@
                 }
             }
         }
-
     }
 
     .img__plano {
@@ -125,4 +130,12 @@
             transform: scale(0.65);
         }
     } 
+}
+
+@media screen and (min-width: 781px) {
+    img {
+        &.logo--mobile {
+            display: none;
+        }
+    }
 }

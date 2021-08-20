@@ -35,13 +35,13 @@
                             </li>
                         </a>
                         <a href="./turnos.html">
-                            <li class="nav__tab--filled nav__tab--active tab3">
+                            <li class="nav__tab--filled tab3">
                                 <i class="icon medical-icon-i-cardiology"></i>
                                 <p>Mis turnos</p>
                             </li>
                         </a>
                         <a href="./inicio.html">
-                            <li class="nav__tab--filled tab3">
+                            <li class="nav__tab--filled nav__tab--active tab3">
                                 <i class="icon medical-icon-i-gift-shop"></i>
                                 <p>Mi mapa HPN</p>
                             </li>
@@ -52,6 +52,10 @@
                     <input type="search" class="input--rounded"></input>
                 </div>
             </header>
+            <button id="zoom" class="btn btn--colorSecundario btn--rounded">
+                <label for="zoomPlano">+</label>
+            </button>
+            <input type="checkbox" id="zoomPlano">
             <section id="plano">
                 <!-- hack CSS para manipular espacios -->
                 <input type="radio" id="plantaBaja" name="hpn">
@@ -9906,7 +9910,7 @@
                             <input id="marker-000" type="checkbox" name="markerHall" />
                             <label for="marker-000">
                                 <i
-                                   class="item__icon item__icon--16 icon icon--colorPrimario medical-icon-mental-health"></i>
+                                   class="item__icon item__icon--16 icon icon--colorPrimario medical-icon-registration"></i>
                             </label>
 
                             <!-- Popover: TODO: Desacoplar en componente -->

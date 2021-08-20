@@ -461,6 +461,8 @@ aside#ingreso {
     height: 100px !important;
     width: 100px !important;
     font-size: .75rem; }
+  section#primerScroll img.logo--desktop {
+    display: none; }
 
   .turnos > div {
     grid-column: 1 / -1;
@@ -523,6 +525,9 @@ aside#ingreso {
     flex-direction: column; }
     main.documentos header.panel > .header__title ~ .btn__container--row {
       transform: scale(0.65); } }
+@media screen and (min-width: 781px) {
+  img.logo--mobile {
+    display: none; } }
 section#bienvenida + input[type="checkbox"],
 section#bienvenida ~ aside#ingreso {
   display: none; }
@@ -1174,10 +1179,34 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18) {
     transform: translateY(-47vh); }
 
+button#zoom {
+  z-index: 1;
+  position: absolute;
+  top: 90vh;
+  left: 5vw;
+  height: 35px;
+  width: 35px;
+  opacity: .85; }
+  button#zoom > label {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: large; }
+    button#zoom > label:hover {
+      cursor: pointer;
+      opacity: 1; }
+
 input#zoomPlano {
   z-index: 1;
   position: inherit;
-  display: block; }
+  display: block;
+  opacity: 0; }
 
 section#plano {
   position: absolute;
@@ -1185,7 +1214,7 @@ section#plano {
   transition: transform 1s ease-in; }
 
 input#zoomPlano:checked ~ section#plano {
-  transform: scale(1.75) translateX(-5vw) translateY(-20vw);
+  transform: scale(1.75) translateX(-5vw) translateY(-10vw);
   transition: transform 1s ease-in; }
   input#zoomPlano:checked ~ section#plano #marker-000 {
     transform: scale(0.5);

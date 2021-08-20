@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="./">
+    <meta name="description" content="Plano interactivo del Hospital Provincial Neuquén">
+    <meta name="keywords" content="plano interactivo, hospital provincial neuquén, hpn, castro rendón">
+    <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Plano interactivo</title>
@@ -23,10 +26,13 @@
         </button>
 
         <!-- img fondo -->
-        <img src="./../assets/img/isometrica.png" class="img--full" alt="">
+        <img src="./assets/img/isometrica.png" class="img--full" alt="">
 
         <section id="primerScroll" class="panel panel--between">
-            <img src="./assets/img/hpn-isologo-h.svg" alt="logo del hospital provincial neuquén" width="300">
+            <img src="./assets/img/hpn-isologo-h.svg" class="logo--desktop" alt="logo del hospital provincial neuquén"
+                 width="300">
+            <img src="./assets/img/hpn-isologo-v.svg" class="logo--mobile" alt="logo del hospital provincial neuquén"
+                 width="150">
             <div class="header__title header__title--center">
                 <h5 class="panel__prefix">ingreso</h5>
                 <h1 class="panel__titulo">Bienvenido</h1>
@@ -37,7 +43,7 @@
                 </a>
                 <br>
                 <a href="./layouts/dashboard.html">
-                    <button class="btn btn--rounded btn--colorTerciario btn--w100">Tengo usuario</button>
+                    <button class="btn btn--rounded btn--colorTerciario btn--w100">Tengo una cuenta</button>
                 </a>
             </div>
 
