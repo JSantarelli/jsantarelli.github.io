@@ -1,0 +1,429 @@
+body, main {
+    font-family: 'Brandon Text', sans-serif;
+    overflow-x: hidden;
+    background: rgb(134, 66, 153);
+    background: linear-gradient(
+        105deg,
+        rgba(134, 66, 153, 1) 0%,
+        rgba(104, 72, 157, 1) 50%,
+        rgba(74, 147, 200, 1) 100%
+    )
+}
+
+main {
+    overflow-y: hidden;
+}
+
+// BLOQUES
+// Header
+.header__container--between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    //mix-blend-mode: soft-light;
+
+    .header__logo {
+    }
+
+    .header__botonera {
+        max-width: 50vw;
+        display: flex;
+        justify-content: flex-end;
+
+        .header__button--icon {
+            color: white;
+        }
+    }
+}
+
+// ELEMENTOS
+// Cards
+.card__container {
+    display: grid;
+    width: 75%;
+    grid-gap: 5rem;
+
+    &--fill {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    &--fit {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+.card {
+        display: flex;
+        text-align: center;
+        padding: 5rem 3rem;
+
+        // --modificadores cromáticos
+        &--transparent {
+            background: transparent;
+            color: white;
+        }
+
+        // --modificadores de dimensiones
+        &--w50 {
+            width: 50%;
+        }
+
+        // --heights
+        &--h50 {
+            height: 50%;
+        }
+
+        &--h75 {
+            height: 75%;
+        }
+
+        // --modificadores dieccionalidad/distributivos
+        &__wrapper {
+
+            &--v {
+                flex-direction: column;
+                align-items: center;
+
+                i.icon {
+                    margin-bottom: 2rem;
+                }
+            }
+            
+            &--h {
+                flex-direction: row;
+            }
+            
+            &--between {
+                justify-content: space-between;
+            }
+        }
+        
+        :is(h1).card__title {
+            font-size: 2.5rem;
+            letter-spacing: normal;
+
+            &::first-line {
+                font-weight: 200;
+            }
+        }
+
+        .card__title {
+            color: white;
+            font-weight: 700;
+
+            &--colorTerciario {
+                color: var(--colorTerciario);
+                font-size: 1rem!important;
+                margin-bottom: .75rem;
+                font-weight: 900;
+            }
+
+        }
+        
+        .card__subtitle {
+            font-weight: 200;
+            font-size: 1.15rem;
+            line-height: 1.65rem;
+            color: white;
+            
+            // --modificador case
+            &--uppercase {
+                text-transform: uppercase;
+                font-size: .65rem;
+                font-weight: 400;
+            }
+        }
+
+        // --modificadores de estados
+        &[selectable] {
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(86, 82, 147, .5);
+            }
+        }
+    }
+
+// Buttons
+.btn {
+    text-transform: capitalize;
+    width: fit-content;
+    font-size: 1.25rem;
+    z-index: 1;
+    
+    &:not(.btn--transparent) {
+        padding: 0.65rem 2.5rem;
+        box-shadow: 0px 0px 10px 0px purple;  
+    }
+
+    // --modificadores de dimensiones
+    &--w25 {
+        width: 25%;
+    }
+
+    &--w50 {
+        width: 50%;
+    }
+
+    &--w75 {
+        width: 75%;
+    }
+
+    // --modificadores colores
+    &--colorTerciario {
+        color: white;
+        background-color: var(--colorTerciario);
+    }
+
+    &--transparent {
+        color: var(--colorTerciario);
+        font-weight: 700;
+        background-color: transparent;
+    }
+
+    // --modificadores formales
+    &--rounded {
+        border-radius: 999px;
+    }
+
+    // --modificadores distribución
+    &__container--evenly {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    } 
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        .btn__prefix {
+            text-transform: uppercase;
+            color: lightgray;
+            font-size: .65rem;
+            margin-bottom: .5rem;
+        }
+
+        &--h {
+            flex-direction: horizontal;
+        }
+
+        &--v {
+            flex-direction: column;
+        }
+    }
+
+    // --modificadores estados
+        &:hover {
+            mix-blend-mode: darken;
+        }
+}
+
+// Icons
+@mixin baseIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.icon-container {
+	display: flex;
+
+    &[center] {
+        text-align: center;
+    }
+
+    &[left] {
+        text-align: left;
+        justify-content: start;
+    }
+    
+	&--horizontal {
+		flex-direction: row;
+        justify-content: center;
+        
+        .icon {
+            margin-right: .25rem;
+        }
+	}
+    
+	&--vertical {
+        flex-direction: column;
+        justify-content: center;
+
+        .icon {
+            margin-bottom: .25rem;
+        }
+	}
+}
+
+.icon {
+    @include baseIcon();
+    // Valores fijos
+    width: 25px;
+    height: 25px;
+
+    // Modificadores formales
+	&--12 {
+        font-size: 12px;
+	}
+	
+	&--24 {
+        font-size: 24px;
+	}
+	
+	&--48 {
+        font-size: 48px;
+	}
+	
+	&--60 {
+        font-size: 60px;
+	}
+	
+    // Modificadores cromáticos
+	&--white {
+		--iconColor: white;
+		-webkit-text-fill-color: var(--iconColor);
+	}
+
+    // --modificador posicionamiento
+    &--absolute {
+        z-index: 0;
+        position: absolute;
+
+        font-size: 30vw;
+        color: white;
+        mix-blend-mode: luminosity;
+        opacity: 0.15;
+
+        // vh
+        &--vh40 {
+            top: 50vh;
+        }
+
+        &--vh70 {
+            top: 70vh;
+        }
+
+        &--vh110 {
+            top: 120vh;
+        }
+
+        &--vh180 {
+            top: 220vh;
+        }
+
+        // vw
+        &--vw5 {
+            left: -10vw;
+        }
+
+        &--vw60 {
+            left: 60vw;
+        }
+
+        &--vw80 {
+            left: 80vw;
+        }
+    }
+
+    // --modificadores estados
+    &:hover {
+        cursor: pointer;
+        opacity: .85;
+    }
+
+}
+
+// Images
+img {
+
+    &.img {
+        width: 100%;
+
+        &--h25 {
+            height: 25vh;
+        }
+    
+        &--h50 {
+            height: 50vh;
+        }
+    
+        &--cover {
+            object-fit: cover;
+        }
+    }
+}
+
+.img__overlay__wrapper {
+    position: relative;
+    height: 35vh;
+    width: 100%;
+
+    > img {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    
+    .img__mask {
+        top: 0;
+        left: 0;
+        position: absolute;
+
+        height: 50vh;
+        width: 100%;
+        opacity: 0;
+        z-index: 0;
+        background-color: var(--colorPrimario);
+        mix-blend-mode: overlay;
+        
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+            background-color: rgba(86, 82, 147, .5);
+        }
+    }
+
+    .img__overlay {
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+        height: 50vh;
+        width: 100%;
+        z-index: 0;
+
+        &__title {
+            font-weight: bolder;
+            color: var(--colorTerciario);
+        }
+
+        &__subtitle {
+            text-transform: uppercase;
+            color: white;
+        }
+        
+        &:hover {
+            opacity: 1;
+            background-color: rgba(50, 80, 135, .85);
+
+        }
+    }
+}

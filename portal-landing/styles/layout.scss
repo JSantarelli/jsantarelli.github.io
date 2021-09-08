@@ -1,0 +1,40 @@
+main.layout__container {
+--colorPrimario: #243163;
+--colorSecundario: #00a1df;
+--colorTerciario: #cb0053;
+
+display: grid;
+grid-template-rows: 3fr;
+
+
+@mixin baseLayout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    section#primerScroll  {
+        @include baseLayout();
+        grid-row: 1;
+        height: 100vh;
+
+        > .card__wrapper--v {
+            width: 35%;
+            height: 50%;
+        }
+    }
+    
+    section#segundoScroll {
+        @include baseLayout();
+        grid-row: 2;
+        height: fit-content;
+
+    }
+
+    section#tercerScroll {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-row: 3;
+        height: fit-content;
+    }
+}
