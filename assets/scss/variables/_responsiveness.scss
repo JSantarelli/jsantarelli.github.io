@@ -1,0 +1,16 @@
+// Turnos
+@media screen and (max-width: 1024px) {
+
+    .container--floating {
+        --panelHeight: 100vh!important;
+
+        top: 0  !important;
+        transform: scale(.85);
+    }
+
+    .container--bajada {
+        justify-content: space-around;
+        height: 50vh;
+    }
+
+}

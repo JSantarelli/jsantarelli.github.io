@@ -1,0 +1,337 @@
+// Paneles emergentes
+// sidebar
+section#bienvenida + input[type="checkbox"],
+section#bienvenida ~ aside#ingreso {
+	display: none;
+}
+
+#btnIngreso:checked ~ aside#ingreso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -9px -1px 7px -3px rgba(118,118,118,0.6);
+    height: calc(100vh - 50px);
+    animation: fadeIn 1s ease-in;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+  }
+  
+// sidenav
+.item__label {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    cursor: pointer;
+}
+
+main > input[type="radio"],
+section#referencias,
+section#busqueda-resultado,
+section#detalle-espacio
+{
+    display: none;
+}
+
+#menuItem01:checked ~ section#referencias {
+    display: flex;
+}
+
+#menuItem02:checked ~ section#busqueda-resultado {
+    display: flex;
+}
+
+#menuItem03:checked ~ section#detalle-espacio {
+    display: flex;
+}
+
+// Solicitar turno
+#solicitarTurno {
+    display: block;
+}
+
+input#btnTurno:checked ~ #solicitarTurno {
+    display: flex;
+}
+
+/* EXPLOTADA */
+// Primer piso
+//section#planta-baja {
+//    opacity: 1;
+//}
+
+//input#plantaBaja:checked ~ section#hpn-desnivel,
+//input#plantaBaja:checked ~ section#primer-piso,
+//input#plantaBaja:checked ~ section#segundo-piso, 
+//input#plantaBaja:checked ~ section#tercer-piso,
+//input#plantaBaja:checked ~ section#cuarto-piso,
+//input#plantaBaja:checked ~ section#quinto-piso {
+//    opacity: 0.25;
+//    pointer-events: none;    
+//    transition: all 1s ease;
+//    filter: grayscale(1);
+
+//    &:not(#hpn-desnivel) {
+//                $top: 2vh;
+//                @for $i from 9 through 18 {
+//                &:nth-child(#{$i}) { transform: translateY(-$top);}
+//                $top: $top + 5vh;
+//            }
+//        }
+//    }
+
+// Servicios primer piso
+section#servicios-sanitarios {
+    display: none;
+}
+
+input#serviciosSanitarios:checked ~ section#servicios-sanitarios {
+    display: flex;
+} 
+
+// Subsuelo
+section#hpn-desnivel {
+    opacity: 1;
+}
+
+input#desnivel:checked ~ section#planta-baja,
+input#desnivel:checked ~ section#primer-piso, 
+input#desnivel:checked ~ section#segundo-piso, 
+input#desnivel:checked ~ section#tercer-piso,
+input#desnivel:checked ~ section#cuarto-piso,
+input#desnivel:checked ~ section#quinto-piso {
+    opacity: 0.25;
+    pointer-events: none;    
+    transition: all 1s ease;
+    filter: grayscale(1);
+
+    &:not(#hpn-desnivel) {
+                $top: 2vh;
+                @for $i from 9 through 18 {
+                &:nth-child(#{$i}) { transform: translateY(-$top);}
+                $top: $top + 5vh;
+            }
+        }
+    }
+
+// Planta baja
+section#planta-baja {
+    opacity: 1;
+}
+
+input#plantaBaja:checked ~ section#hpn-desnivel,
+input#plantaBaja:checked ~ section#primer-piso,
+input#plantaBaja:checked ~ section#segundo-piso, 
+input#plantaBaja:checked ~ section#tercer-piso,
+input#plantaBaja:checked ~ section#cuarto-piso,
+input#plantaBaja:checked ~ section#quinto-piso {
+    opacity: 0.25;
+    pointer-events: none;    
+    transition: all 1s ease;
+    filter: grayscale(1);
+    z-index: -1;
+
+    &:not(#hpn-desnivel) {
+                $top: 2vh;
+                @for $i from 9 through 18 {
+                &:nth-child(#{$i}) { transform: translateY(-$top);}
+                $top: $top + 5vh;
+            }
+        }
+    }
+
+// Servicios asistenciales
+section#servicios-asistenciales {
+    display: none;
+}
+
+input#plantaBaja:checked {
+    & ~ section#servicios-asistenciales {
+        display: flex;
+        z-index: 0;
+    }
+    & ~ section#servicios-sanitarios {
+        z-index: -1;
+    }    
+}
+
+// Segundo piso
+section#primer-piso {
+    opacity: 1;
+}
+
+input#primerPiso:checked ~ section#hpn-desnivel,
+input#primerPiso:checked ~ section#planta-baja,
+input#primerPiso:checked ~ section#segundo-piso, 
+input#primerPiso:checked ~ section#tercer-piso,
+input#primerPiso:checked ~ section#cuarto-piso,
+input#primerPiso:checked ~ section#quinto-piso {
+    opacity: 0.25;
+    pointer-events: none;    
+    transition: all 1s ease;
+    filter: grayscale(1);
+
+    &:not(#hpn-desnivel, #planta-baja) {
+                $top: 2vh;
+                @for $i from 9 through 18 {
+                &:nth-child(#{$i}) { transform: translateY(-$top);}
+                $top: $top + 5vh;
+            }
+        }
+    }
+
+// Tercer piso
+section#segundo-piso {
+    opacity: 1;
+}
+
+input#segundoPiso:checked ~ section#hpn-desnivel,
+input#segundoPiso:checked ~ section#planta-baja,
+input#segundoPiso:checked ~ section#primer-piso,
+input#segundoPiso:checked ~ section#tercer-piso,
+input#segundoPiso:checked ~ section#cuarto-piso,
+input#segundoPiso:checked ~ section#quinto-piso {
+    opacity: 0.25;
+    pointer-events: none;    
+    transition: all 1s ease;
+    filter: grayscale(1);
+
+    &:not(#hpn-desnivel, #planta-baja, #primer-piso) {
+                $top: 2vh;
+                @for $i from 9 through 18 {
+                &:nth-child(#{$i}) { transform: translateY(-$top);}
+                $top: $top + 5vh;
+            }
+        }
+    }
+
+// Tercer piso
+section#tercer-piso {
+    opacity: 1;
+}
+
+input#tercerPiso:checked ~ section#hpn-desnivel,
+input#tercerPiso:checked ~ section#planta-baja,
+input#tercerPiso:checked ~ section#primer-piso,
+input#tercerPiso:checked ~ section#segundo-piso,
+input#tercerPiso:checked ~ section#cuarto-piso,
+input#tercerPiso:checked ~ section#quinto-piso {
+    opacity: 0.25;
+    pointer-events: none;    
+    transition: all 1s ease;
+    filter: grayscale(1);
+
+    &:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso) {
+                $top: 2vh;
+                @for $i from 9 through 18 {
+                &:nth-child(#{$i}) { transform: translateY(-$top);}
+                $top: $top + 5vh;
+            }
+        }
+    }
+
+// Cuarto piso
+section#cuarto-piso {
+    opacity: 1;
+}
+
+input#cuartoPiso:checked ~ section#hpn-desnivel,
+input#cuartoPiso:checked ~ section#planta-baja,
+input#cuartoPiso:checked ~ section#primer-piso,
+input#cuartoPiso:checked ~ section#segundo-piso,
+input#cuartoPiso:checked ~ section#tercer-piso,
+input#cuartoPiso:checked ~ section#quinto-piso {
+    opacity: 0.25;
+    pointer-events: none;    
+    transition: all 1s ease;
+    filter: grayscale(1);
+
+    &:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso) {
+                $top: 2vh;
+                @for $i from 9 through 18 {
+                &:nth-child(#{$i}) { transform: translateY(-$top);}
+                $top: $top + 5vh;
+            }
+        }
+    }
+
+// Quinto piso
+section#quinto-piso {
+    opacity: 1;
+}
+
+input#quintoPiso:checked ~ section#hpn-desnivel,
+input#quintoPiso:checked ~ section#planta-baja,
+input#quintoPiso:checked ~ section#primer-piso,
+input#quintoPiso:checked ~ section#segundo-piso,
+input#quintoPiso:checked ~ section#tercer-piso,
+input#quintoPiso:checked ~ section#cuarto-piso {
+    opacity: 0.25;
+    pointer-events: none;    
+    transition: all 1s ease;
+    filter: grayscale(1);
+
+    &:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso) {
+                $top: 2vh;
+                @for $i from 9 through 18 {
+                &:nth-child(#{$i}) { transform: translateY(-$top);}
+                $top: $top + 5vh;
+            }
+        }
+    }
+
+// Zooming
+input#zoomPlano {
+    z-index: 1;
+    position: inherit;
+    display: block;
+}
+
+section#plano {
+    position: absolute;
+    transform: scale(1);
+    transition: transform 1s ease-in;
+}
+
+input#zoomPlano:checked ~ section#plano {
+    transform: scale(1.75) translateX(-5vw) translateY(-20vw);
+    transition: transform 1s ease-in;
+
+    #marker-000 {
+        transform: scale(.5);
+        transition: transform 1s ease-in;
+    }
+}
+
+// Hack documentacion
+section[class^="doc"] {
+    display: none;
+}
+
+input#doc1:checked ~ section.doc1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: .5rem;
+}
+
+input#doc2:checked ~ section.doc2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: .5rem;
+}
+
+input#doc3:checked ~ section.doc3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: .5rem;
+}
+
+input#doc4:checked ~ section.doc4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: .5rem;
+}
