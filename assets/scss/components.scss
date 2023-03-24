@@ -4,7 +4,7 @@
 -------------------------------------*/
  // Elementos tipografico
  .container__prefix {
-    --colorTerciario: #b08b80;
+    --colorTerciario: #10EED0;
 
     color: var(--colorTerciario);
     text-transform: uppercase;
@@ -12,13 +12,14 @@
 
 .container__titulo {
     font-size: 3rem;
-    
+    text-shadow: 1px 1px 5px black;
 }
 
 .container--bajada {
     font-size: 1.25rem;
     //grid-row: 1;
     color: white;
+    text-shadow: 1px 1px 5px black;
     font-weight: lighter;
     line-height: 2rem;
     display: flex;
@@ -102,7 +103,7 @@ button {
             }
         
         @include baseButton;
-		color: white;
+		color: $azul-oscuro;
         padding: .5rem .85rem;
         
 		&:active {

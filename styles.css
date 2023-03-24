@@ -10,10 +10,11 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url(./portal-landing/assets/fonts/andes-font-icons/css/andes-font.css);
+@import './portal-landing/assets/fonts/andes-font-icons/css/andes-font.css';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 html {
-  line-height: 1.15; }
+  line-height: 1.15;
+}
 
 /* Sections
 	 ========================================================================== */
@@ -22,13 +23,15 @@ html {
  */
 body {
   font-family: sans-serif;
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Render the `main` element consistently in IE.
  */
 main {
-  display: block; }
+  display: block;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -36,10 +39,12 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 h2, h3, h4, h5, h6, p {
-  margin: 0; }
+  margin: 0;
+}
 
 /* Grouping content
 	 ========================================================================== */
@@ -50,7 +55,8 @@ h2, h3, h4, h5, h6, p {
 hr {
   box-sizing: content-box;
   height: 0;
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -58,7 +64,8 @@ hr {
  */
 pre {
   font-family: monospace, monospace;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /* Text-level semantics
 	 ========================================================================== */
@@ -66,7 +73,8 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -75,14 +83,16 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  text-decoration: underline dotted;
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -92,13 +102,15 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -109,13 +121,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 /* Embedded content
 	 ========================================================================== */
@@ -123,7 +138,8 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /* Forms
 	 ========================================================================== */
@@ -139,7 +155,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Show the overflow in IE.
@@ -147,7 +164,8 @@ textarea {
  */
 button,
 input {
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -155,41 +173,46 @@ input {
  */
 button,
 select {
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; }
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
 
 /**
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em; }
+  padding: 0.35em 0.75em 0.625em;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -203,49 +226,56 @@ legend {
   display: table;
   max-width: 100%;
   padding: 0;
-  white-space: normal; }
+  white-space: normal;
+}
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px; }
+  outline-offset: -2px;
+}
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -253,7 +283,8 @@ textarea {
  */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  font: inherit; }
+  font: inherit;
+}
 
 /* Interactive
 	 ========================================================================== */
@@ -261,13 +292,15 @@ textarea {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
-  display: block; }
+  display: block;
+}
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 /* Misc
 	 ========================================================================== */
@@ -275,32 +308,39 @@ summary {
  * Add the correct display in IE 10+.
  */
 template {
-  display: none; }
+  display: none;
+}
 
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 a, ul, li {
   text-decoration: none;
   color: inherit;
   list-style: none;
   margin: 0;
-  padding: 0; }
-  a.menu-item, ul.menu-item, li.menu-item {
-    margin: 0 5px; }
-    a.menu-item:hover, ul.menu-item:hover, li.menu-item:hover {
-      color: #e3007e; }
-    a.menu-item:visited, ul.menu-item:visited, li.menu-item:visited {
-      color: #243163; }
+  padding: 0;
+}
+a.menu-item, ul.menu-item, li.menu-item {
+  margin: 0 5px;
+}
+a.menu-item:hover, ul.menu-item:hover, li.menu-item:hover {
+  color: #e3007e;
+}
+a.menu-item:visited, ul.menu-item:visited, li.menu-item:visited {
+  color: #243163;
+}
 
 /* -------------------------------------
-## TIPOLOG├ìAS DE LAYOUTS 
+## TIPOLOGÍAS DE LAYOUTS 
 -------------------------------------*/
 body[full] main p, body[full] article, body[full] h1, body[full] h2, body[full] h3 {
-  color: white; }
+  color: white;
+}
 body[full] .img--background {
   width: 100%;
   height: 100vh;
@@ -308,17 +348,20 @@ body[full] .img--background {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -1; }
+  z-index: -1;
+}
 body[full] .container--start {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  grid-row: 1; }
+  grid-row: 1;
+}
 body[full] .container--between {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-row: 1; }
+  grid-row: 1;
+}
 body[full] .container--floating {
   --panelHeight: 25%;
   border-bottom: solid 1px white;
@@ -331,61 +374,76 @@ body[full] .container--floating {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: 2fr;
-  grid-gap: 1rem; }
+  grid-gap: 1rem;
+}
 
 /* -------------------------------------
-## COMPONENTES GR├üFICOS
+## COMPONENTES GRÁFICOS
 -------------------------------------*/
 .container__prefix {
-  --colorTerciario: #b08b80;
+  --colorTerciario: #10EED0;
   color: var(--colorTerciario);
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .container__titulo {
-  font-size: 3rem; }
+  font-size: 3rem;
+  text-shadow: 1px 1px 5px black;
+}
 
 .container--bajada {
   font-size: 1.25rem;
   color: white;
+  text-shadow: 1px 1px 5px black;
   font-weight: lighter;
   line-height: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
-  .container--bajada > p {
-    margin-bottom: 1rem; }
+  justify-content: space-between;
+}
+.container--bajada > p {
+  margin-bottom: 1rem;
+}
 
 .icon__container--flex {
   display: flex;
-  flex-direction: row; }
-  .icon__container--flex-between {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    justify-content: space-between; }
+  flex-direction: row;
+}
+.icon__container--flex-between {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
 .icon__container--grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  width: 100%; }
+  width: 100%;
+}
 
 .icon__wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+}
 .icon--sm {
   width: 30px;
   height: 30px;
-  margin-right: .5rem; }
+  margin-right: 0.5rem;
+}
 .icon--text {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 .btn__container {
   display: flex;
   max-height: 2rem;
   flex-direction: row;
-  justify-content: flex-start; }
-  .btn__container > a > .btn {
-    margin-right: .5rem; }
+  justify-content: flex-start;
+}
+.btn__container > a > .btn {
+  margin-right: 0.5rem;
+}
 
 button.btn {
   align-self: center;
@@ -394,33 +452,47 @@ button.btn {
   box-shadow: none !important;
   border-radius: 50px;
   text-transform: uppercase;
-  font-size: .85rem;
-  color: white;
-  padding: .5rem .85rem; }
-  button.btn:active {
-    filter: brightness(0.5); }
-  button.btn:hover {
-    cursor: pointer;
-    filter: brightness(0.8); }
-  button.btn--colorPrimario {
-    background-color: #243163; }
-  button.btn--colorSecundario {
-    background-color: #00b9b1; }
-  button.btn--colorTerciario {
-    background-color: #b08b80; }
+  font-size: 0.85rem;
+  color: #243163;
+  padding: 0.5rem 0.85rem;
+}
+button.btn:active {
+  filter: brightness(0.5);
+}
+button.btn:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+button.btn--colorPrimario {
+  background-color: #243163;
+}
+button.btn--colorSecundario {
+  background-color: #00b9b1;
+}
+button.btn--colorTerciario {
+  background-color: #10EED0;
+}
 
 @media screen and (max-width: 1024px) {
   .container--floating {
     --panelHeight: 100vh!important;
-    top: 0  !important;
-    transform: scale(0.85); }
+    top: 0 !important;
+    transform: scale(0.85);
+  }
 
   .container--bajada {
-    justify-content: space-around;
-    height: 50vh; } }
-section#bienvenida + input[type="checkbox"],
+    justify-content: space-between;
+    height: 50vh;
+  }
+
+  .container--between {
+    height: 50vh;
+  }
+}
+section#bienvenida + input[type=checkbox],
 section#bienvenida ~ aside#ingreso {
-  display: none; }
+  display: none;
+}
 
 #btnIngreso:checked ~ aside#ingreso {
   display: flex;
@@ -429,50 +501,64 @@ section#bienvenida ~ aside#ingreso {
   box-shadow: -9px -1px 7px -3px rgba(118, 118, 118, 0.6);
   height: calc(100vh - 50px);
   animation: fadeIn 1s ease-in;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+}
 
 @keyframes fadeIn {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 .item__label {
   display: flex;
   align-items: center;
   width: fit-content;
   height: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-main > input[type="radio"],
+main > input[type=radio],
 section#referencias,
 section#busqueda-resultado,
 section#detalle-espacio {
-  display: none; }
+  display: none;
+}
 
 #menuItem01:checked ~ section#referencias {
-  display: flex; }
+  display: flex;
+}
 
 #menuItem02:checked ~ section#busqueda-resultado {
-  display: flex; }
+  display: flex;
+}
 
 #menuItem03:checked ~ section#detalle-espacio {
-  display: flex; }
+  display: flex;
+}
 
 #solicitarTurno {
-  display: block; }
+  display: block;
+}
 
 input#btnTurno:checked ~ #solicitarTurno {
-  display: flex; }
+  display: flex;
+}
 
 /* EXPLOTADA */
 section#servicios-sanitarios {
-  display: none; }
+  display: none;
+}
 
 input#serviciosSanitarios:checked ~ section#servicios-sanitarios {
-  display: flex; }
+  display: flex;
+}
 
 section#hpn-desnivel {
-  opacity: 1; }
+  opacity: 1;
+}
 
 input#desnivel:checked ~ section#planta-baja,
 input#desnivel:checked ~ section#primer-piso,
@@ -483,80 +569,92 @@ input#desnivel:checked ~ section#quinto-piso {
   opacity: 0.25;
   pointer-events: none;
   transition: all 1s ease;
-  filter: grayscale(1); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(9),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(9),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(9),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(9),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(9),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(9) {
-    transform: translateY(-2vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(10),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(10),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(10),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(10),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(10),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(10) {
-    transform: translateY(-7vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(11),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(11),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(11),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(11),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(11),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(11) {
-    transform: translateY(-12vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(12),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(12),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(12),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(12),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(12),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(12) {
-    transform: translateY(-17vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(13),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(13),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(13),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(13),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(13),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(13) {
-    transform: translateY(-22vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(14),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(14),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(14),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(14),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(14),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(14) {
-    transform: translateY(-27vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(15),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(15),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(15),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(15),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(15),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(15) {
-    transform: translateY(-32vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(16),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(16),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(16),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(16),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(16),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(16) {
-    transform: translateY(-37vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(17),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(17),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(17),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(17),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(17),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(17) {
-    transform: translateY(-42vh); }
-  input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(18),
-  input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(18),
-  input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(18),
-  input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(18),
-  input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(18),
-  input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(18) {
-    transform: translateY(-47vh); }
+  filter: grayscale(1);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(9),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(9),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(9),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(9),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(9),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(9) {
+  transform: translateY(-2vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(10),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(10),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(10),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(10),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(10),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(10) {
+  transform: translateY(-7vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(11),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(11),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(11),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(11),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(11),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(11) {
+  transform: translateY(-12vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(12),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(12),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(12),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(12),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(12),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(12) {
+  transform: translateY(-17vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(13),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(13),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(13),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(13),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(13),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(13) {
+  transform: translateY(-22vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(14),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(14),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(14),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(14),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(14),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(14) {
+  transform: translateY(-27vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(15),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(15),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(15),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(15),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(15),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(15) {
+  transform: translateY(-32vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(16),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(16),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(16),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(16),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(16),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(16) {
+  transform: translateY(-37vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(17),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(17),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(17),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(17),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(17),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(17) {
+  transform: translateY(-42vh);
+}
+input#desnivel:checked ~ section#planta-baja:not(#hpn-desnivel):nth-child(18),
+input#desnivel:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(18),
+input#desnivel:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(18),
+input#desnivel:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(18),
+input#desnivel:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(18),
+input#desnivel:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(18) {
+  transform: translateY(-47vh);
+}
 
 section#planta-baja {
-  opacity: 1; }
+  opacity: 1;
+}
 
 input#plantaBaja:checked ~ section#hpn-desnivel,
 input#plantaBaja:checked ~ section#primer-piso,
@@ -568,89 +666,104 @@ input#plantaBaja:checked ~ section#quinto-piso {
   pointer-events: none;
   transition: all 1s ease;
   filter: grayscale(1);
-  z-index: -1; }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(9),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(9),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(9),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(9),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(9),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(9) {
-    transform: translateY(-2vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(10),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(10),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(10),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(10),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(10),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(10) {
-    transform: translateY(-7vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(11),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(11),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(11),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(11),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(11),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(11) {
-    transform: translateY(-12vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(12),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(12),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(12),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(12),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(12),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(12) {
-    transform: translateY(-17vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(13),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(13),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(13),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(13),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(13),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(13) {
-    transform: translateY(-22vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(14),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(14),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(14),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(14),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(14),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(14) {
-    transform: translateY(-27vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(15),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(15),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(15),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(15),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(15),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(15) {
-    transform: translateY(-32vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(16),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(16),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(16),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(16),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(16),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(16) {
-    transform: translateY(-37vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(17),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(17),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(17),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(17),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(17),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(17) {
-    transform: translateY(-42vh); }
-  input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(18),
-  input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(18),
-  input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(18),
-  input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(18),
-  input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(18),
-  input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(18) {
-    transform: translateY(-47vh); }
+  z-index: -1;
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(9),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(9),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(9),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(9),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(9),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(9) {
+  transform: translateY(-2vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(10),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(10),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(10),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(10),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(10),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(10) {
+  transform: translateY(-7vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(11),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(11),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(11),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(11),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(11),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(11) {
+  transform: translateY(-12vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(12),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(12),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(12),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(12),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(12),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(12) {
+  transform: translateY(-17vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(13),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(13),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(13),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(13),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(13),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(13) {
+  transform: translateY(-22vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(14),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(14),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(14),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(14),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(14),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(14) {
+  transform: translateY(-27vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(15),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(15),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(15),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(15),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(15),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(15) {
+  transform: translateY(-32vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(16),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(16),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(16),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(16),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(16),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(16) {
+  transform: translateY(-37vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(17),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(17),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(17),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(17),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(17),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(17) {
+  transform: translateY(-42vh);
+}
+input#plantaBaja:checked ~ section#hpn-desnivel:not(#hpn-desnivel):nth-child(18),
+input#plantaBaja:checked ~ section#primer-piso:not(#hpn-desnivel):nth-child(18),
+input#plantaBaja:checked ~ section#segundo-piso:not(#hpn-desnivel):nth-child(18),
+input#plantaBaja:checked ~ section#tercer-piso:not(#hpn-desnivel):nth-child(18),
+input#plantaBaja:checked ~ section#cuarto-piso:not(#hpn-desnivel):nth-child(18),
+input#plantaBaja:checked ~ section#quinto-piso:not(#hpn-desnivel):nth-child(18) {
+  transform: translateY(-47vh);
+}
 
 section#servicios-asistenciales {
-  display: none; }
+  display: none;
+}
 
 input#plantaBaja:checked ~ section#servicios-asistenciales {
   display: flex;
-  z-index: 0; }
+  z-index: 0;
+}
 input#plantaBaja:checked ~ section#servicios-sanitarios {
-  z-index: -1; }
+  z-index: -1;
+}
 
 section#primer-piso {
-  opacity: 1; }
+  opacity: 1;
+}
 
 input#primerPiso:checked ~ section#hpn-desnivel,
 input#primerPiso:checked ~ section#planta-baja,
@@ -661,80 +774,92 @@ input#primerPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
   pointer-events: none;
   transition: all 1s ease;
-  filter: grayscale(1); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(9),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(9),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(9) {
-    transform: translateY(-2vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(10),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(10),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(10) {
-    transform: translateY(-7vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(11),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(11),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(11) {
-    transform: translateY(-12vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(12),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(12),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(12) {
-    transform: translateY(-17vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(13),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(13),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(13) {
-    transform: translateY(-22vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(14),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(14),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(14) {
-    transform: translateY(-27vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(15),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(15),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(15) {
-    transform: translateY(-32vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(16),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(16),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(16) {
-    transform: translateY(-37vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(17),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(17),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(17) {
-    transform: translateY(-42vh); }
-  input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(18),
-  input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(18),
-  input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(18),
-  input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(18),
-  input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(18),
-  input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(18) {
-    transform: translateY(-47vh); }
+  filter: grayscale(1);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(9),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(9),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(9),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(9) {
+  transform: translateY(-2vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(10),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(10),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(10),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(10) {
+  transform: translateY(-7vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(11),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(11),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(11),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(11) {
+  transform: translateY(-12vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(12),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(12),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(12),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(12) {
+  transform: translateY(-17vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(13),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(13),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(13),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(13) {
+  transform: translateY(-22vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(14),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(14),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(14),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(14) {
+  transform: translateY(-27vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(15),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(15),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(15),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(15) {
+  transform: translateY(-32vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(16),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(16),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(16),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(16) {
+  transform: translateY(-37vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(17),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(17),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(17),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(17) {
+  transform: translateY(-42vh);
+}
+input#primerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja):nth-child(18),
+input#primerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja):nth-child(18),
+input#primerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja):nth-child(18),
+input#primerPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja):nth-child(18),
+input#primerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja):nth-child(18),
+input#primerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja):nth-child(18) {
+  transform: translateY(-47vh);
+}
 
 section#segundo-piso {
-  opacity: 1; }
+  opacity: 1;
+}
 
 input#segundoPiso:checked ~ section#hpn-desnivel,
 input#segundoPiso:checked ~ section#planta-baja,
@@ -745,80 +870,92 @@ input#segundoPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
   pointer-events: none;
   transition: all 1s ease;
-  filter: grayscale(1); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9) {
-    transform: translateY(-2vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10) {
-    transform: translateY(-7vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11) {
-    transform: translateY(-12vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12) {
-    transform: translateY(-17vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13) {
-    transform: translateY(-22vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14) {
-    transform: translateY(-27vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15) {
-    transform: translateY(-32vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16) {
-    transform: translateY(-37vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17) {
-    transform: translateY(-42vh); }
-  input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
-  input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
-  input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
-  input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
-  input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
-  input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18) {
-    transform: translateY(-47vh); }
+  filter: grayscale(1);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(9) {
+  transform: translateY(-2vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(10) {
+  transform: translateY(-7vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(11) {
+  transform: translateY(-12vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(12) {
+  transform: translateY(-17vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(13) {
+  transform: translateY(-22vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(14) {
+  transform: translateY(-27vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(15) {
+  transform: translateY(-32vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(16) {
+  transform: translateY(-37vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(17) {
+  transform: translateY(-42vh);
+}
+input#segundoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
+input#segundoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
+input#segundoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
+input#segundoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
+input#segundoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18),
+input#segundoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso):nth-child(18) {
+  transform: translateY(-47vh);
+}
 
 section#tercer-piso {
-  opacity: 1; }
+  opacity: 1;
+}
 
 input#tercerPiso:checked ~ section#hpn-desnivel,
 input#tercerPiso:checked ~ section#planta-baja,
@@ -829,80 +966,92 @@ input#tercerPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
   pointer-events: none;
   transition: all 1s ease;
-  filter: grayscale(1); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9) {
-    transform: translateY(-2vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10) {
-    transform: translateY(-7vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11) {
-    transform: translateY(-12vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12) {
-    transform: translateY(-17vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13) {
-    transform: translateY(-22vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14) {
-    transform: translateY(-27vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15) {
-    transform: translateY(-32vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16) {
-    transform: translateY(-37vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17) {
-    transform: translateY(-42vh); }
-  input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
-  input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
-  input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
-  input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
-  input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
-  input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18) {
-    transform: translateY(-47vh); }
+  filter: grayscale(1);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(9) {
+  transform: translateY(-2vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(10) {
+  transform: translateY(-7vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(11) {
+  transform: translateY(-12vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(12) {
+  transform: translateY(-17vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(13) {
+  transform: translateY(-22vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(14) {
+  transform: translateY(-27vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(15) {
+  transform: translateY(-32vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(16) {
+  transform: translateY(-37vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(17) {
+  transform: translateY(-42vh);
+}
+input#tercerPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
+input#tercerPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
+input#tercerPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
+input#tercerPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
+input#tercerPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18),
+input#tercerPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso):nth-child(18) {
+  transform: translateY(-47vh);
+}
 
 section#cuarto-piso {
-  opacity: 1; }
+  opacity: 1;
+}
 
 input#cuartoPiso:checked ~ section#hpn-desnivel,
 input#cuartoPiso:checked ~ section#planta-baja,
@@ -913,80 +1062,92 @@ input#cuartoPiso:checked ~ section#quinto-piso {
   opacity: 0.25;
   pointer-events: none;
   transition: all 1s ease;
-  filter: grayscale(1); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9) {
-    transform: translateY(-2vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10) {
-    transform: translateY(-7vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11) {
-    transform: translateY(-12vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12) {
-    transform: translateY(-17vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13) {
-    transform: translateY(-22vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14) {
-    transform: translateY(-27vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15) {
-    transform: translateY(-32vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16) {
-    transform: translateY(-37vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17) {
-    transform: translateY(-42vh); }
-  input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
-  input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
-  input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
-  input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
-  input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
-  input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18) {
-    transform: translateY(-47vh); }
+  filter: grayscale(1);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(9) {
+  transform: translateY(-2vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(10) {
+  transform: translateY(-7vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(11) {
+  transform: translateY(-12vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(12) {
+  transform: translateY(-17vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(13) {
+  transform: translateY(-22vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(14) {
+  transform: translateY(-27vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(15) {
+  transform: translateY(-32vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(16) {
+  transform: translateY(-37vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(17) {
+  transform: translateY(-42vh);
+}
+input#cuartoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
+input#cuartoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
+input#cuartoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
+input#cuartoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
+input#cuartoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18),
+input#cuartoPiso:checked ~ section#quinto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso):nth-child(18) {
+  transform: translateY(-47vh);
+}
 
 section#quinto-piso {
-  opacity: 1; }
+  opacity: 1;
+}
 
 input#quintoPiso:checked ~ section#hpn-desnivel,
 input#quintoPiso:checked ~ section#planta-baja,
@@ -997,124 +1158,145 @@ input#quintoPiso:checked ~ section#cuarto-piso {
   opacity: 0.25;
   pointer-events: none;
   transition: all 1s ease;
-  filter: grayscale(1); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9) {
-    transform: translateY(-2vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10) {
-    transform: translateY(-7vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11) {
-    transform: translateY(-12vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12) {
-    transform: translateY(-17vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13) {
-    transform: translateY(-22vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14) {
-    transform: translateY(-27vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15) {
-    transform: translateY(-32vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16) {
-    transform: translateY(-37vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17) {
-    transform: translateY(-42vh); }
-  input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
-  input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
-  input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
-  input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
-  input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
-  input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18) {
-    transform: translateY(-47vh); }
+  filter: grayscale(1);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(9) {
+  transform: translateY(-2vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(10) {
+  transform: translateY(-7vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(11) {
+  transform: translateY(-12vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(12) {
+  transform: translateY(-17vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(13) {
+  transform: translateY(-22vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(14) {
+  transform: translateY(-27vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(15) {
+  transform: translateY(-32vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(16) {
+  transform: translateY(-37vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(17) {
+  transform: translateY(-42vh);
+}
+input#quintoPiso:checked ~ section#hpn-desnivel:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
+input#quintoPiso:checked ~ section#planta-baja:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
+input#quintoPiso:checked ~ section#primer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
+input#quintoPiso:checked ~ section#segundo-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
+input#quintoPiso:checked ~ section#tercer-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18),
+input#quintoPiso:checked ~ section#cuarto-piso:not(#hpn-desnivel, #planta-baja, #primer-piso, #segundo-piso, #tercer-piso, #cuarto-piso):nth-child(18) {
+  transform: translateY(-47vh);
+}
 
 input#zoomPlano {
   z-index: 1;
   position: inherit;
-  display: block; }
+  display: block;
+}
 
 section#plano {
   position: absolute;
   transform: scale(1);
-  transition: transform 1s ease-in; }
+  transition: transform 1s ease-in;
+}
 
 input#zoomPlano:checked ~ section#plano {
   transform: scale(1.75) translateX(-5vw) translateY(-20vw);
-  transition: transform 1s ease-in; }
-  input#zoomPlano:checked ~ section#plano #marker-000 {
-    transform: scale(0.5);
-    transition: transform 1s ease-in; }
+  transition: transform 1s ease-in;
+}
+input#zoomPlano:checked ~ section#plano #marker-000 {
+  transform: scale(0.5);
+  transition: transform 1s ease-in;
+}
 
-section[class^="doc"] {
-  display: none; }
+section[class^=doc] {
+  display: none;
+}
 
 input#doc1:checked ~ section.doc1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: .5rem; }
+  grid-gap: 0.5rem;
+}
 
 input#doc2:checked ~ section.doc2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: .5rem; }
+  grid-gap: 0.5rem;
+}
 
 input#doc3:checked ~ section.doc3 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: .5rem; }
+  grid-gap: 0.5rem;
+}
 
 input#doc4:checked ~ section.doc4 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: .5rem; }
+  grid-gap: 0.5rem;
+}
 
 /*--------------------------------------------------------------
 # JSantarelli - Colores
 --------------------------------------------------------------*/
 /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 body, main {
-  font-family: 'Source Sans Pro', sans-serif;
-  overflow-x: hidden; }
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+}
 
 /*# sourceMappingURL=styles.css.map */
