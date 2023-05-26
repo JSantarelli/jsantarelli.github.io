@@ -1,0 +1,102 @@
+/* -------------------------------------
+## LAYOUT 
+-------------------------------------*/
+@import './variables/colors';
+
+.page__layout--basic {
+
+    --navHeight: 60px;
+    --sidenavWidth: 320px;
+    --topnavHeight: var(--navHeight);
+    --footerHeight: var(--navHeight);
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 60px 1fr 60px;
+    box-sizing: border-box;
+
+    height: 100vh;
+    // position: relative;
+
+
+    aside {
+        grid-column: 1;
+        grid-row: 2;
+
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background-color: $colorPrimario;
+        width: var(--sidenavWidth);
+        color: steelblue;
+
+        padding: 1rem;
+
+        // &:hover {
+        //     --sidenavWidth: 200px;
+        //     width: var(--sidenavWidth);
+        //     transition: width 900ms ease;
+        // }
+    }
+
+    header {
+        grid-column: 1 / -1;
+        grid-row: 1;
+
+        background-color: aquamarine;
+    }
+
+    main {
+        grid-column: 2;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 480px 1fr;
+        position: relative;
+        
+        
+        .sidepanel {
+            // position: absolute;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            
+            right: 100%;
+            overflow-y: scroll;
+            z-index: 0;
+
+                background-color: violet;
+            }
+        
+        .containder--top {
+            grid-column: 2 / -1;
+            grid-row: 1;
+            width: 100%;
+
+            background-color: purple; 
+        }
+    
+        .container--bottom {
+            grid-column: 2 / -1;
+            grid-row: 2;
+
+            background-color: lightblue;         
+        }
+
+        }
+    
+
+    footer {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        width: 100%;
+        // position: absolute;
+        // top: calc(100vh - var(--topnavHeight) - var(--footerHeight));
+        height: var(--footerHeight);
+
+        background-color: black;
+        mix-blend-mode: multiply;
+    }
+}

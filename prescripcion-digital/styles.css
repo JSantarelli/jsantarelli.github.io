@@ -1,0 +1,74 @@
+/* -------------------------------------
+## LAYOUT 
+-------------------------------------*/
+/*--------------------------------------------------------------
+# HPN - Colores
+--------------------------------------------------------------*/
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.page__layout--basic {
+  --navHeight: 60px;
+  --sidenavWidth: 320px;
+  --topnavHeight: var(--navHeight);
+  --footerHeight: var(--navHeight);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.page__layout--basic aside {
+  grid-column: 1;
+  grid-row: 2;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: #243163;
+  width: var(--sidenavWidth);
+  color: steelblue;
+  padding: 1rem;
+}
+.page__layout--basic header {
+  grid-column: 1/-1;
+  grid-row: 1;
+  background-color: aquamarine;
+}
+.page__layout--basic main {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 480px 1fr;
+  position: relative;
+}
+.page__layout--basic main .sidepanel {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: flex;
+  flex-direction: column;
+  right: 100%;
+  overflow-y: scroll;
+  z-index: 0;
+  background-color: violet;
+}
+.page__layout--basic main .containder--top {
+  grid-column: 2/-1;
+  grid-row: 1;
+  width: 100%;
+  background-color: purple;
+}
+.page__layout--basic main .container--bottom {
+  grid-column: 2/-1;
+  grid-row: 2;
+  background-color: lightblue;
+}
+.page__layout--basic footer {
+  grid-column: 1/-1;
+  grid-row: 3;
+  width: 100%;
+  height: var(--footerHeight);
+  background-color: black;
+  mix-blend-mode: multiply;
+}
+
+/*# sourceMappingURL=styles.css.map */

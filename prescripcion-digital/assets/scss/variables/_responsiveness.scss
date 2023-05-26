@@ -1,0 +1,141 @@
+// Turnos
+@media screen and (min-width: 320px) and (max-width: 780px) {
+    header > nav .nav__tab--filled p{
+        display: none!important;
+    }
+    main {
+        overflow-y: scroll!important;
+    }
+
+    form {
+        height: 45%!important;
+    }
+
+    section#primerScroll {
+        button.btn__flotante--inf {
+            top: calc(100vh - 140px)!important;
+            left: calc(50% - 50px)!important;
+            height: 100px!important;
+            width: 100px!important;
+            font-size: .75rem;
+        }
+
+        img {
+            &.logo--desktop {
+                display: none;
+            }
+        }
+    }
+
+    .turnos {
+        
+        > div {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 3fr;
+
+            .cal {
+                grid-column: 1 / -1!important;
+                grid-row: 1!important;
+
+                .calendar {
+                    .calendar__cell {
+                        padding: .5vw 1vw;
+                        font-size: 1.5vw;
+                        
+                        &:nth-child(n+8) {
+                            font-size: 5vw;
+                            padding: 1.5vw;
+                        }
+                        
+                        .badge {
+                            display: none!important;
+                        }
+                    }
+                }
+            }
+            
+            .list {
+                grid-column: 1 / -1!important;
+                grid-row: 2!important;                    
+            }
+            
+            .form {
+                grid-column: 1 / -1!important;
+                grid-row: 3!important;
+            }   
+        }
+    }
+
+    section#segundoScroll {
+        grid-column: 1/-1;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 2fr;
+        height: 100vh;
+        border-top: solid 1px gray;
+
+        #contenedorTitulo {
+            grid-column: 1/-1;
+            grid-row: 1;
+            height: 100vh;
+        }
+        
+        #contenedorNota {
+            grid-column: 1 /-1;
+            grid-row: 2;
+            height: 100vh;
+        }
+
+    }
+
+    .l-standar {
+
+        main.dashboard {
+            grid-template-rows: 75px auto auto;
+            grid-template-areas: 
+            "nav nav nav nav nav nav"
+            "mn mn mn mn mn mn"
+            "faq faq faq faq faq faq"
+            "bottom bottom bottom bottom bottom bottom"
+            "form form form form form form";
+
+            .panel.mn {
+                .slider__contenedor--full {
+                    --imgHeight: 50vh;
+                    .slider__img {
+                        min-width: 200px;
+                        width: fit-content;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .img__plano {
+        position: absolute;
+        top: -10vh;
+        left: -75vw!important;
+        height: 100vh;
+        width: fit-content!important;
+    }
+
+    main.documentos header.panel {
+        flex-direction: column;
+        
+        & > .header__title ~ .btn__container--row {
+            transform: scale(0.65);
+        }
+    } 
+}
+
+@media screen and (min-width: 781px) {
+    img {
+        &.logo--mobile {
+            display: none;
+        }
+    }
+}
