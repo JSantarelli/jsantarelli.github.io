@@ -1,4 +1,3 @@
-
 meds = ['ABIRATERONA', 'DOXILAMINA', 'IBUPROFENO', 'OMEPRAZOL', 'OXICODONA', 'SALBUTAMOL', 'VALSARTAN']
 
 let med = parseInt(prompt('Ingrese una cantidad de articulos (una cifra): '))
