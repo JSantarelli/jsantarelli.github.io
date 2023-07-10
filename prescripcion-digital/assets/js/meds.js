@@ -1,7 +1,7 @@
 const vademecum = [
     {
       laboratorio: "KLONAL S.R.L.",
-      nroCertificado: 41042,
+      id: 41042,
       nombreComercial: "IBUPROFENO KLONAL",
       nombreGenerico: "IBUPROFENO",
       concentracion: "2%",
@@ -12,7 +12,7 @@ const vademecum = [
     },
     {
       laboratorio: "KLONAL S.R.L.",
-      nroCertificado: 41042,
+      id: 41042,
       nombreComercial: "IBUPROFENO KLONAL",
       nombreGenerico: "IBUPROFENO",
       concentracion: "400 MG",
@@ -23,7 +23,7 @@ const vademecum = [
     },
     {
       laboratorio: "GLAXOSMITHKLINE ARGENTINA S.A.",
-      nroCertificado: 38534,
+      id: 38534,
       nombreComercial: "VENTIDE",
       nombreGenerico: "SALBUTAMOL - DIPROPIONATO DE BECLOMETASONA",
       concentracion: "100 MCG/ DOSIS - 50 MCG/ DOSIS",
@@ -33,7 +33,7 @@ const vademecum = [
     },
     {
       laboratorio: "FINADIET S.A.C.I.  E I.",
-      nroCertificado: 58268,
+      id: 58268,
       nombreComercial: "ENORDEN",
       nombreGenerico: "ABIRATERONA ACETATO",
       concentracion: "250 MG",
@@ -43,7 +43,7 @@ const vademecum = [
     },
     {
       laboratorio: "RAYMOS S.A.C. E I.",
-      nroCertificado: 57312,
+      id: 57312,
       nombreComercial: "TUERIS",
       nombreGenerico: "DOXILAMINA SUCCINATO - PIRIDOXINA CLORHIDRATO",
       concentracion: "10 MG - 10 MG",
@@ -53,7 +53,7 @@ const vademecum = [
     },
     {
       laboratorio: "RAYMOS S.A.C. E I.",
-      nroCertificado: 57312,
+      id: 57312,
       nombreComercial: "TUERIS",
       nombreGenerico: "DOXILAMINA SUCCINATO - PIRIDOXINA CLORHIDRATO",
       concentracion: "10 MG - 10 MG",
@@ -63,7 +63,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIO ELEA - PHOENIX S.A.",
-      nroCertificado: 58696,
+      id: 58696,
       nombreComercial: "LUMIERE",
       nombreGenerico: "BEVACIZUMAB",
       concentracion: "5 MG/ 0,2 ML",
@@ -73,7 +73,7 @@ const vademecum = [
     },
     {
       laboratorio: "GLAXOSMITHKLINE ARGENTINA S.A.",
-      nroCertificado: 54051,
+      id: 54051,
       nombreComercial: "IBUEVANOL MAX RAPIDA ACCION",
       nombreGenerico: "IBUPROFENO  -  CAFEINA",
       concentracion: "400 MG  -  100 MG",
@@ -83,7 +83,7 @@ const vademecum = [
     },
     {
       laboratorio: "KLONAL S.R.L.",
-      nroCertificado: 48033,
+      id: 48033,
       nombreComercial: "AMLOTENS",
       nombreGenerico: "AMLODIPINA",
       concentracion: "5 MG",
@@ -93,7 +93,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS BAGO S.A.",
-      nroCertificado: 19879,
+      id: 19879,
       nombreComercial: "BAGOHEPAT RAPIDA ACCION",
       nombreGenerico: "EXTRACTO SECO DE CYNARA SCOLYMUS - ACIDO DEHIDROCOLICO",
       concentracion: "100 MG - 100 MG",
@@ -103,7 +103,7 @@ const vademecum = [
     },
     {
       laboratorio: "NOVARTIS ARGENTINA S.A.",
-      nroCertificado: 34127,
+      id: 34127,
       nombreComercial: "MIRUS",
       nombreGenerico: "CLORHIDRATO DE NAFAZOLINA  -  MALEATO DE FENIRAMINA",
       concentracion: "0,025 G  -  0,3 G",
@@ -113,7 +113,7 @@ const vademecum = [
     },
     {
       laboratorio: "CELNOVA ARGENTINA S.A.",
-      nroCertificado: 57520,
+      id: 57520,
       nombreComercial: "ZOLENOVA",
       nombreGenerico: "ACIDO ZOLEDRONICO",
       concentracion: "4 MG",
@@ -123,7 +123,7 @@ const vademecum = [
     },
     {
       laboratorio: "SANOFI AVENTIS ARGENTINA S.A.",
-      nroCertificado: 58400,
+      id: 58400,
       nombreComercial: "PRALUENT",
       nombreGenerico: "ALIROCUMAB",
       concentracion: "75 MG / ML",
@@ -133,7 +133,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 55118,
+      id: 55118,
       nombreComercial: "NEURISTAN",
       nombreGenerico: "PREGABALINA",
       concentracion: "50 MG",
@@ -143,7 +143,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 57304,
+      id: 57304,
       nombreComercial: "CALCI CORTICAS",
       nombreGenerico: "CALCIPOTRIOL - BETAMETASONA DIPROPIONATO",
       concentracion: "0,005 G/ 100 G - 0,05 G/ 100 G",
@@ -153,7 +153,7 @@ const vademecum = [
     },
     {
       laboratorio: "MONTE VERDE S.A.",
-      nroCertificado: 56278,
+      id: 56278,
       nombreComercial: "PROLIA",
       nombreGenerico: "DENOSUMAB",
       concentracion: "60 MG/ML",
@@ -163,7 +163,7 @@ const vademecum = [
     },
     {
       laboratorio: "MS SYNTHON BAGO S.A.",
-      nroCertificado: 57726,
+      id: 57726,
       nombreComercial: "CATIRA 120",
       nombreGenerico: "DIMETILFUMARATO",
       concentracion: "120 MG",
@@ -173,7 +173,7 @@ const vademecum = [
     },
     {
       laboratorio: "MS SYNTHON BAGO S.A.",
-      nroCertificado: 57716,
+      id: 57716,
       nombreComercial: "ZILOBE",
       nombreGenerico: "FAMPRIDINA",
       concentracion: "10 MG",
@@ -183,7 +183,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 54333,
+      id: 54333,
       nombreComercial: "ANTIMICON",
       nombreGenerico: "FLUCONAZOL",
       concentracion: "150 MG",
@@ -193,7 +193,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 41655,
+      id: 41655,
       nombreComercial: "DANLOX",
       nombreGenerico: "OMEPRAZOL",
       concentracion: "20 MG",
@@ -203,7 +203,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 41655,
+      id: 41655,
       nombreComercial: "DANLOX",
       nombreGenerico: "OMEPRAZOL",
       concentracion: "40 MG",
@@ -213,7 +213,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 56634,
+      id: 56634,
       nombreComercial: "DILCORAN",
       nombreGenerico: "VALSARTAN",
       concentracion: "80 MG",
@@ -223,7 +223,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 56634,
+      id: 56634,
       nombreComercial: "DILCORAN",
       nombreGenerico: "VALSARTAN",
       concentracion: "160 MG",
@@ -233,7 +233,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 56634,
+      id: 56634,
       nombreComercial: "DILCORAN",
       nombreGenerico: "VALSARTAN",
       concentracion: "320 MG",
@@ -243,7 +243,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 57425,
+      id: 57425,
       nombreComercial: "DILCORAN D",
       nombreGenerico: "VALSARTAN - HIDROCLOROTIAZIDA",
       concentracion: "80 MG - 12,5 MG",
@@ -253,7 +253,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 57425,
+      id: 57425,
       nombreComercial: "DILCORAN D",
       nombreGenerico: "VALSARTAN - HIDROCLOROTIAZIDA",
       concentracion: "160 MG - 12,5 MG",
@@ -263,7 +263,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 57382,
+      id: 57382,
       nombreComercial: "DILCORAN PLUS",
       nombreGenerico: "VALSARTAN - AMLODIPINA",
       concentracion: "160 MG - 5 MG",
@@ -273,7 +273,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 57382,
+      id: 57382,
       nombreComercial: "DILCORAN PLUS",
       nombreGenerico: "VALSARTAN - AMLODIPINA",
       concentracion: "160 MG - 10 MG",
@@ -283,7 +283,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 54640,
+      id: 54640,
       nombreComercial: "HIPOLIPOL",
       nombreGenerico: "ROSUVASTATINA",
       concentracion: "5 MG",
@@ -293,7 +293,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 54640,
+      id: 54640,
       nombreComercial: "HIPOLIPOL",
       nombreGenerico: "ROSUVASTATINA",
       concentracion: "10 MG",
@@ -303,7 +303,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 54640,
+      id: 54640,
       nombreComercial: "HIPOLIPOL",
       nombreGenerico: "ROSUVASTATINA",
       concentracion: "20 MG",
@@ -313,7 +313,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 51770,
+      id: 51770,
       nombreComercial: "PANTOCAS",
       nombreGenerico: "PANTOPRAZOL",
       concentracion: "20 MG",
@@ -323,7 +323,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 51770,
+      id: 51770,
       nombreComercial: "PANTOCAS",
       nombreGenerico: "PANTOPRAZOL",
       concentracion: "40 MG",
@@ -333,7 +333,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 58409,
+      id: 58409,
       nombreComercial: "LIRPAN PLUS",
       nombreGenerico: "MEMANTINA CLORHIDRATO - DONEPEZILO CLORHIDRATO",
       concentracion: "14 MG - 10 MG",
@@ -343,7 +343,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS CASASCO S.A.I.C.",
-      nroCertificado: 58409,
+      id: 58409,
       nombreComercial: "LIRPAN PLUS",
       nombreGenerico: "MEMANTINA CLORHIDRATO - DONEPEZILO CLORHIDRATO",
       concentracion: "28 MG - 10 MG",
@@ -353,7 +353,7 @@ const vademecum = [
     },
     {
       laboratorio: "CRAVERI S.A.I.C.",
-      nroCertificado: 58200,
+      id: 58200,
       nombreComercial: "FLUDART",
       nombreGenerico: "LEFLUNOMIDA",
       concentracion: "20 MG",
@@ -363,7 +363,7 @@ const vademecum = [
     },
     {
       laboratorio: "CRAVERI S.A.I.C.",
-      nroCertificado: 58200,
+      id: 58200,
       nombreComercial: "FLUDART",
       nombreGenerico: "LEFLUNOMIDA",
       concentracion: "20 MG",
@@ -373,7 +373,7 @@ const vademecum = [
     },
     {
       laboratorio: "OXAPHARMA S.A.",
-      nroCertificado: 58552,
+      id: 58552,
       nombreComercial: "ISOTAN",
       nombreGenerico: "ISOTRETINOINA",
       concentracion: "20 MG",
@@ -383,7 +383,7 @@ const vademecum = [
     },
     {
       laboratorio: "GEMINIS FARMACEUTICA S.A.",
-      nroCertificado: 55283,
+      id: 55283,
       nombreComercial: "UNILEVO",
       nombreGenerico: "LEVOFLOXACINA",
       concentracion: "750 MG",
@@ -393,7 +393,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIO AUSTRAL S.A.",
-      nroCertificado: 41521,
+      id: 41521,
       nombreComercial: "ACIMED",
       nombreGenerico: "OMEPRAZOL",
       concentracion: "40 MG",
@@ -403,7 +403,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIO AUSTRAL S.A.",
-      nroCertificado: 41521,
+      id: 41521,
       nombreComercial: "ACIMED",
       nombreGenerico: "OMEPRAZOL",
       concentracion: "40 MG",
@@ -413,7 +413,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIO AUSTRAL S.A.",
-      nroCertificado: 51662,
+      id: 51662,
       nombreComercial: "FOSFACOL 1F",
       nombreGenerico: "FOSFATO MONOSODICO – FOSFATO DISODICO",
       concentracion: "48 G / 100 ML - 18 G / 100 ML",
@@ -423,7 +423,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIO AUSTRAL S.A.",
-      nroCertificado: 51895,
+      id: 51895,
       nombreComercial: "IBU APRACUR FORTE",
       nombreGenerico: "IBUPROFENO",
       concentracion: "4 G / 100 ML",
@@ -433,7 +433,7 @@ const vademecum = [
     },
     {
       laboratorio: "MONTE VERDE S.A.",
-      nroCertificado: 56278,
+      id: 56278,
       nombreComercial: "PROLIA",
       nombreGenerico: "DENOSUMAB",
       concentracion: "60 MG/ML",
@@ -443,7 +443,7 @@ const vademecum = [
     },
     {
       laboratorio: "LAFEDAR S.A.",
-      nroCertificado: 50971,
+      id: 50971,
       nombreComercial: "GEMFI - LIP",
       nombreGenerico: "GEMFIBROZIL",
       concentracion: "900 MG",
@@ -453,7 +453,7 @@ const vademecum = [
     },
     {
       laboratorio: "LAFEDAR S.A.",
-      nroCertificado: 50971,
+      id: 50971,
       nombreComercial: "GEMFI - LIP",
       nombreGenerico: "GEMFIBROZIL",
       concentracion: "900 MG",
@@ -463,7 +463,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIO DOMINGUEZ S.A.",
-      nroCertificado: 47390,
+      id: 47390,
       nombreComercial: "DEXO FORTE",
       nombreGenerico: "ACIDO URSODESOXICOLICO",
       concentracion: "500 MG",
@@ -473,7 +473,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS IMA S.A.I.C.",
-      nroCertificado: 58648,
+      id: 58648,
       nombreComercial: "FULL V",
       nombreGenerico: "FULVESTRANT",
       concentracion: "250 MG / 5 ML",
@@ -483,7 +483,7 @@ const vademecum = [
     },
     {
       laboratorio: "TUTEUR S.A.C.I.F.I.A.",
-      nroCertificado: 58580,
+      id: 58580,
       nombreComercial: "FACEMIL",
       nombreGenerico: "APREMILAST",
       concentracion: "10 MG - 20 MG - 30 MG",
@@ -493,7 +493,7 @@ const vademecum = [
     },
     {
       laboratorio: "TUTEUR S.A.C.I.F.I.A.",
-      nroCertificado: 58580,
+      id: 58580,
       nombreComercial: "FACEMIL",
       nombreGenerico: "APREMILAST",
       concentracion: "30 MG",
@@ -503,7 +503,7 @@ const vademecum = [
     },
     {
       laboratorio: "NOVARTIS ARGENTINA S.A.",
-      nroCertificado: 43154,
+      id: 43154,
       nombreComercial: "ALCON LAGRIMAS UNGÜENTON",
       nombreGenerico: "VASELINA LIQUIDA - LANOLINA LIQUIDA ANHIDRA",
       concentracion: "30 MG/ G - 30 MG / G",
@@ -513,7 +513,7 @@ const vademecum = [
     },
     {
       laboratorio: "NOVARTIS ARGENTINA S.A.",
-      nroCertificado: 49622,
+      id: 49622,
       nombreComercial: "TRAVATAN",
       nombreGenerico: "TRAVOPROST",
       concentracion: "0,04 MG / ML",
@@ -523,7 +523,7 @@ const vademecum = [
     },
     {
       laboratorio: "ASTRAZENECA S.A.",
-      nroCertificado: 39881,
+      id: 39881,
       nombreComercial: "PLENDIL",
       nombreGenerico: "FELODIPINA",
       concentracion: "10 MG",
@@ -533,7 +533,7 @@ const vademecum = [
     },
     {
       laboratorio: "ASTRAZENECA S.A.",
-      nroCertificado: 39881,
+      id: 39881,
       nombreComercial: "PLENDIL",
       nombreGenerico: "FELODIPINA",
       concentracion: "5 MG",
@@ -543,7 +543,7 @@ const vademecum = [
     },
     {
       laboratorio: "MUNDIPHARMA PHARMACEUTICALS ARGENTINA S.R.L.",
-      nroCertificado: 46428,
+      id: 46428,
       nombreComercial: "OXYCONTIN",
       nombreGenerico: "OXICODONA CLORHIDRATO",
       concentracion: "10 MG",
@@ -553,7 +553,7 @@ const vademecum = [
     },
     {
       laboratorio: "MUNDIPHARMA PHARMACEUTICALS ARGENTINA S.R.L.",
-      nroCertificado: 46428,
+      id: 46428,
       nombreComercial: "OXYCONTIN",
       nombreGenerico: "OXICODONA CLORHIDRATO",
       concentracion: "20 MG",
@@ -563,7 +563,7 @@ const vademecum = [
     },
     {
       laboratorio: "MUNDIPHARMA PHARMACEUTICALS ARGENTINA S.R.L.",
-      nroCertificado: 46428,
+      id: 46428,
       nombreComercial: "OXYCONTIN",
       nombreGenerico: "OXICODONA CLORHIDRATO",
       concentracion: "40 MG",
@@ -573,7 +573,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIO ELEA - PHOENIX S.A.",
-      nroCertificado: 58203,
+      id: 58203,
       nombreComercial: "FOZVIR",
       nombreGenerico: "SOFOSVUBIR",
       concentracion: "400 MG",
@@ -583,7 +583,7 @@ const vademecum = [
     },
     {
       laboratorio: "FRESENIUS MEDICAL CARE ARGENTINA S.A.",
-      nroCertificado: 50524,
+      id: 50524,
       nombreComercial: "FERROLOGIC",
       nombreGenerico: "HIERRO SACARATO",
       concentracion: "100 MG / 5 ML",
@@ -593,7 +593,7 @@ const vademecum = [
     },
     {
       laboratorio: "GEMEPE S.A.",
-      nroCertificado: 46175,
+      id: 46175,
       nombreComercial: "BABY FACT B",
       nombreGenerico: "SURFACTANTE PULMONAR BOVINO MODIFICADO",
       concentracion: "30 MG / ML",
@@ -603,7 +603,7 @@ const vademecum = [
     },
     {
       laboratorio: "GEMEPE S.A.",
-      nroCertificado: 46175,
+      id: 46175,
       nombreComercial: "BABY FACT B",
       nombreGenerico: "SURFACTANTE PULMONAR BOVINO MODIFICADO",
       concentracion: "30 MG / ML",
@@ -613,7 +613,7 @@ const vademecum = [
     },
     {
       laboratorio: "KLONAL S.R.L.",
-      nroCertificado: 41309,
+      id: 41309,
       nombreComercial: "PENICILINA G BENZATINA KLONAL",
       nombreGenerico: "PENICILINA G BENZATINA",
       concentracion: "1200000 UI",
@@ -623,7 +623,7 @@ const vademecum = [
     },
     {
       laboratorio: "KLONAL S.R.L.",
-      nroCertificado: 41309,
+      id: 41309,
       nombreComercial: "PENICILINA G BENZATINA KLONAL",
       nombreGenerico: "PENICILINA G BENZATINA",
       concentracion: "2400000 UI",
@@ -633,7 +633,7 @@ const vademecum = [
     },
     {
       laboratorio: "LABORATORIOS BETA S.A.",
-      nroCertificado: 51371,
+      id: 51371,
       nombreComercial: "ATERONOVA 5 MG",
       nombreGenerico: "ROSUVASTATINA",
       concentracion: "5 MG",
@@ -643,7 +643,7 @@ const vademecum = [
     },
     {
       laboratorio: "ASTRAZENECA S.A.",
-      nroCertificado: 35500,
+      id: 35500,
       nombreComercial: "BELOZOK",
       nombreGenerico: "METOPROLOL SUCCINATO",
       concentracion: "95 MG",
@@ -653,7 +653,7 @@ const vademecum = [
     },
     {
       laboratorio: "ASTRAZENECA S.A.",
-      nroCertificado: 35500,
+      id: 35500,
       nombreComercial: "BELOZOK",
       nombreGenerico: "METOPROLOL SUCCINATO",
       concentracion: "47,5 MG",
@@ -663,7 +663,7 @@ const vademecum = [
     },
     {
       laboratorio: "ASTRAZENECA S.A.",
-      nroCertificado: 35500,
+      id: 35500,
       nombreComercial: "BELOZOK",
       nombreGenerico: "METOPROLOL SUCCINATO",
       concentracion: "23,75 MG",
@@ -673,3 +673,19 @@ const vademecum = [
     }
   ]
   
+
+const unidades = [
+  'Ampolla',
+  'Cápsula blanda',
+  'Cápsula dura',
+  'Comprimido de liberación prolongada',
+  'Comprimido gastroresistente',
+  'Comprimido recubierto',
+  'Envase',
+  'Frasco',
+  'Frasco gotero plástico',
+  'Jerínga prellenada',
+  'Lapicera para inyección',
+  'Pomo',
+  'Vial'
+]

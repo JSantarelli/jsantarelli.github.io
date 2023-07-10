@@ -3,122 +3,71 @@
     <head>
         <title>JS!</title>
         <link rel="stylesheet" href="./styles.css">
-        <script defer src="assets/js/funciones.js"></script>
+        <!-- <script defer src="assets/js/meds.json"></script> -->
+        <script defer src="assets/js/meds.js"></script>
+        <script defer src="assets/js/functions.js"></script>
+        <script defer src="assets/js/readPrescription.js"></script>
+        <script defer src="assets/js/createPrescription.js"></script>
+        <!-- Libraries -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body class="page__layout--basic">
 
         <!-- App header -->
         <header>
-
+            <h1>Prescription manager system</h1>
+            <button id="removePrescription">Delete all meds</button>
+            <button id="savePrescription" onclick="savePrescription()">Save prescription</button>
         </header>
 
         <aside>
             
-
+            <fieldset>
+                <legend>Patient information</legend>
+                <label for="patientInfo">Patient name</label>
+                <input type="field" placeholder="Ingrese su nombre" id="patientInfo">
+                <button id="btnRegister" onchange="displayPatientInfo()">Register patient</button>
+            </fieldset>
+            <hr>
+            <h1>Search</h1>
             <!-- Setteo medicamento -->
+            <h3>Results</h3>
+            <ul id="containerResults">
 
-            <label for="nombreMedicamento">Medicamento</label>
-            <select name="nombreMedicamento" id="nombreMedicamento" onChange="selectedMedicamento()">
-                <option value="0">Seleccione medicamento</option>
-            </select>
-            <fieldset>
-                <legend>Dosis</legend>
-                <label for="dosisCantidad">Cantidad</label>
-                <br>
-                <input type="number" id="dosisCantidad" onChange="getCantidad()">
-                <br>
-                <label for="dosisUnidad">Forma farmacéutica</label>
-                <select name="dosisUnidad" id="">
-                    <option value="">Ampolla</option>
-                    <option value="">Cápsula blanda</option>
-                    <option value="">Cápsula dura</option>
-                    <option value="">Comprimido de liberación prolongada</option>
-                    <option value="">Comprimido gastroresistente</option>
-                    <option value="">Comprimido recubierto</option>
-                    <option value="">Envase</option>
-                    <option value="">Frasco</option>
-                    <option value="">Frasco gotero plástico</option>
-                    <option value="">Jerínga prellenada</option>
-                    <option value="">Lapicera para inyección</option>
-                    <option value="">Pomo</option>
-                    <option value="">Vial</option>
-                </select>
-            </fieldset>
 
-            <fieldset>
-                <legend>Frecuencia</legend>
-                <!-- <label for="dosisCantidad">Intervalo</label>
-                <input type="number" name="dosisCantidad">
-                
-                <label for="tiempoFormato">Formato tiempo</label>
-                <select name="tiempoFormato" id="">
-                    <option value="0">Minutos (Min)</option>
-                    <option value="1">Horas (Hr)</option>
-                    <option value="2">Días (D)</option>
-                </select> -->
-
-                <label for="fechaInicio">Fecha de inicio</label>
-                <br>
-                <input type="date" id="fechaInicio" name="fechaInicio">       
-                <br>
-                <label for="fechaFin">Fecha de finalización</label>
-                <br>
-                <input type="date" id="fechaFin" name="fechaFin" onChange="calcDuracion()">
-            </fieldset>
-
-            <button onclick="calcRefill()">Tengo suficiente medicación?</button>
-
-            <!-- <label for="viaAdministracion">Vía de adminitración</label>
-            <select name="viaAdministracion" id="">
-                <option value="1">Oral</option>
-                <option value="2">Sublingual</option>
-                <option value="3">Transdermal</option>
-                <option value="4">Intravenous</option>
-                <option value="5">Subcutaneous</option>
-                <option value="6">Inhalation</option>
-                <option value="6">Topical</option>
-            </select> -->
-
-            <!-- <fieldset>
-                <label for="estado">Estado</label>
-                <select name="estado" id="">
-                    <option value="1">Activo</option>
-                    <option value="2">Pausado</option>
-                    <option value="3">Finalizado</option>
-                    <option value="4">Cancelado</option>
-                </select>
-                <label for="razonCancelacion"></label>
-                <textarea name="" id="razonCancelacion" cols="1" rows="5">
-                </textarea>  
-            </fieldset>   -->
-
+            </ul>
         </aside>
 
-
-
         <main>
+            <p id="treatmentDuration"></p>
 
-            <div class="sidepanel">
+
+            <div id="containerMeds" class="main__grid--fit">
+                <!-- <section id="localMeds"></section> -->
                 
+            </div>
             
             <div class="container--top">
-            
+                <!-- Cambia visibilidad al salvar la prescripción -->
+                <section id="containerSummary">
+                    <h3 id="namePatient"></h3>
+                    <hr>
+                    <button onclick="backPrescriptions()">Back to prescriptions</button>
+                </section>
+ 
             </div>
-
-        
 
             <div class="container--bottom">
-                
-                <p>Bottom</p>
 
             </div>
+
 
         </main>
 
         <footer>
             <p>Footer!</p>
         </footer>
-
+        
     </body>
 
 </html>
