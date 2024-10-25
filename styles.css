@@ -414,6 +414,7 @@ body[full] .container--floating {
   flex-direction: row;
   flex-flow: wrap;
   justify-content: space-between;
+  gap: .5rem;
 }
 .icon__container--grid {
   display: grid;
