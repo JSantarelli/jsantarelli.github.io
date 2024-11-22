@@ -1,0 +1,34 @@
+header.page__header {
+    --page__body--padding: 6rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem var(--panel__padding);
+    height: var(--header__height);
+    width: 100vw;
+    background: var(--header__bg--color);
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+        
+    // .header__logo--desktop {
+    //     display: block;
+    // }
+
+    // .header__logo--responsive {
+    //     display: none;
+    // }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--header__gap--horizontal);
+
+        i {
+            font-size: var(--icon--size);
+        }
+    }
+}

@@ -1,0 +1,95 @@
+   <!-- Contenedor interno -->
+   <div class="inner__wrapper">
+    <div class="inner__wrapper--left">
+      <span class="input__wrapper--col">
+        <label for="regionSelect">Seleccionar Región</label>
+        <div class="input__select--custom">
+          <select id="regionSelect" class="form__select--custom" onchange="actualizarBanderaPorRegion()">
+          </select>
+        </div>
+      </span>
+      <!-- Bandera regiones -->
+      <figure class="flag">
+        <div class="flag__stripe--static--top">
+        </div>
+        <div class="flag__inner-wrapper">
+          <span id="pobrezaRegion" class="flag__stripe--top">
+            <article class="stripe__inner-wrapper--top">
+              <p class="flag__inner-text--top">Pobreza</p>
+              <output class="flag__output--pob"></output>
+              <img src="./assets/img/flag__arrow--down.svg" width="21" height="28"  alt="">
+            </article>
+          </span>
+          <hr class="flag__divider--pob">
+          <span id="middleRegion" class="flag__stripe--middle">
+            <span class="sun">
+              <output class="flag__output--oportunidades"></output>
+            </span>
+          </span>
+          <hr class="flag__divider--ind">
+          <span id="indigenciaRegion" class="flag__stripe--bottom">
+            <article class="stripe__inner-wrapper--bottom">
+              <img src="./assets/img/flag__arrow--up.svg" width="21" height="28"  alt="">
+              <output class="flag__output--ind"></output>
+              <p class="flag__inner-text--bottom">Indigencia</p>
+            </article>
+          </span>
+          <hr class="flag__divider--bottom">
+          <hr class="flag__divider--middle">
+          <hr class="flag__divider--top">          
+        </div>
+        <div class="flag__stripe--static--bottom">
+        </div>
+      </figure> 
+    </div>
+    <div class="inner__wrapper--right">
+      <div class="wrapper--col">
+        <span class="wrapper--col">
+          <article class="kpi__wrapper--col">
+            <h3 class="panel__prefix--lg">Región seleccionada</h3>
+            <output id="selectedRegion" class="panel__title--xxl"></output>
+          </article>
+          <hr class="divider--col">
+          <div class="wrapper--row">
+            <article class="kpi__wrapper--col">
+              <h3 class="panel__prefix--lg">Pobreza total</h3>
+              <output id="porcentaje-pobTotal-region" class="panel__title--xl text__color--white"></output>
+              <p id="personas-pobTotal-region" class="panel__subfix--lg"></p>
+            </article>
+            <button id="toggleIndicadoresH" type="button" class="btn__icon--primary" onclick="expandirIndicadoresG()">
+              <img src="./assets/img/chevron__down--primary.svg" height="16" width="16">  
+              Ver indicadores
+            </button>
+          </div>
+        </span>
+        <!-- KPI grid -->
+        <div id="indicadoresRegiones" class="text__wrapper--grid">
+            <article class="kpi__wrapper--col">
+              <h3 class="panel__prefix">Pobreza</h3>
+              <output id="porcentaje-pob-region" class="panel__number"></output>
+              <p id="personas-pob-region" class="panel__subfix"></p>
+            </article>
+            <article class="kpi__wrapper--col">
+              <h3 class="panel__prefix">Indigencia</h3>
+              <output id="porcentaje-ind-region" class="panel__number"></output>
+              <p id="personas-ind-region" class="panel__subfix"></p>
+            </article>
+            <article class="kpi__wrapper--col">
+              <h3 class="panel__prefix">Oportunidades</h3>
+              <output id="porcentaje-noPob-region" class="panel__number"></output>
+              <p id="personas-noPob-region" class="panel__subfix"></p>
+            </article>
+          </div>
+        </div>
+        <hr>
+        <div class="btn__wrapper--row">
+          <button type="button" class="btn__link--primary">
+            <img src="./assets/img/chevron__down--primary.svg" alt="" width="20" height="20">
+            <a href="#insights">Cuáles son las causas</a>
+          </button>
+          <button id="resetButton" type="button" class="btn__fill--primary">
+            <a href="#geografico">Resetear</a>
+          </button>
+        </div>
+    </div>
+  </div>

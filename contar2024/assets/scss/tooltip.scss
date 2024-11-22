@@ -1,0 +1,75 @@
+
+.tooltip__wrapper {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    top: -24px;
+    right: -14px;
+}
+
+.tooltip__icon {
+    width: 20px;
+    height: 20px;
+    font-weight: bolder;
+}
+
+#geografico {
+    .tooltip__content {
+    --tooltip__bg--color: var(--neutral);
+    --tooltip__text--color: var(--primaryDark);
+
+    background-color: var(--tooltip__bg--color);
+    color: var(--tooltip__text--color);
+    }
+}
+
+
+.tooltip__content {
+    --tooltip__bg--color: var(--primaryDark);
+    --tooltip__text--color: var(--secondaryLight);
+
+    position: absolute;
+    top: -70px;
+    right: -24px;
+    background-color: var(--tooltip__bg--color);
+    color: var(--tooltip__text--color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    width: 120px;
+    height: fit-content;
+    text-align: left;
+    text-transform: capitalize;
+    line-height: 1.25;
+    text-wrap: wrap;
+    z-index: 10;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        right: 28px;
+        border-width: 6px;
+        border-style: solid;
+        border-color: var(--primaryDark) transparent transparent transparent;
+    }
+}
+
+// Mostrar el tooltip al hacer hover en desktop o tap en mobile
+.tooltip__wrapper:hover .tooltip__content,
+.tooltip__wrapper:focus .tooltip__content {
+    --neutralLight: var(--primary);
+    visibility: visible;
+    opacity: 1;
+}
+
+// Soporte para dispositivos móviles con toque
+@media (hover: none) and (pointer: coarse) {
+    .tooltip__wrapper:active .tooltip__content {
+        visibility: visible;
+        opacity: 1;
+    }
+}

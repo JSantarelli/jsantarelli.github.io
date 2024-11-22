@@ -1,0 +1,25 @@
+//  Tabs
+.tabs {
+    display: flex;
+    border-bottom: 2px solid var(--tabs-border-color);
+  }
+  
+  .tab__link {
+    background-color: var(--tab-bg-color);
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+  
+    &.active {
+      background-color: var(--tab-active-bg-color);
+    }
+  }
+  
+  .tab__content--none {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+  

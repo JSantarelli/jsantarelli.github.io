@@ -1,0 +1,164 @@
+%baseBtn {
+    padding: 0 0 0 12px;
+    background: var(--button__bg--color);
+    font-size: var(--button__font--size);
+    font-weight: 500;
+    color: var(--button__text--color);
+    text-align: var(--button__text--align);
+    border-radius: var(--button__border--radius);
+    width: var(--button__width);
+    height: min-content;
+    text-transform: unset;
+    text-wrap: nowrap;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+// Wrapper
+.btn__wrapper--row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: nowrap;
+    gap: var(--button__wrapper--gap);
+    align-items: center;
+}
+
+small {
+    a {
+        color: var(--neutral);
+
+        &:hover {
+            color: var(--neutralLight);
+        }
+    }
+}
+
+button {
+    @extend %baseBtn;
+    position: relative;
+    > a {
+        display: block;
+        padding: var(--button__padding);
+    }
+
+    > img {
+        &.rotate {
+            transform: rotate(-180deg);
+        }
+    }
+
+    // sizes
+    &[size=block] {
+        display: block;
+        width: 100%;
+    }
+
+    &[size=sm] {
+        --button__font--size: 12px;
+    }
+
+    &[size=md] {
+        --button__font--size: 18px;
+    }
+
+    &[size=lg] {
+        --button__font--size: 24px;
+    }
+
+    &:not([class*='__outline']) {
+        &:hover, &:active, &:visited {
+            filter: brightness(95%);
+            cursor: pointer;
+        } 
+    }
+    
+    &[disabled] {
+        pointer-events: none;
+        opacity: .5;
+        user-select: none;
+        cursor: not-allowed;
+    }
+
+    // Outlier
+    &#openModal {
+        position: absolute;
+        top: 12px;
+        right: 7.5vw;
+        padding: 6px 12px;
+    }
+
+    // Types
+    &[class*=__fill] {
+        --button__text--color: white;
+        border: solid 2px var(--button__color);
+        
+        > a {
+            color: var(--button__text--color);
+        }
+    }
+
+    &[class*=__outline] {
+        --button__border--color: var(--button__color);
+        --button__text--color: var(--button__color);
+        background: transparent;
+        border: solid 2px var(--button__color);
+                
+        > a {
+            color: var(--button__text--color);
+        }
+
+        &:hover, &:active, &:visited {
+            background-color: var(--secondary);
+        }
+    }
+
+    &[class*=__link] {
+        --button__border--color: var(--button__color);
+        --button__text--color: var(--button__color);
+        background: transparent!important;
+        border: none!important;
+                
+        > a {
+            color: var(--button__text--color);
+        }
+    }
+
+    &[class*=__icon] {
+        --button__border--color: var(--button__color);
+        --button__text--color: var(--button__color);
+        background: transparent!important;
+        border: solid 2px var(--button__color);
+        padding: 8px;
+    }
+
+    // Colors
+    &[class$=--primary] {
+        --button__color: var(--primary);
+        --button__bg--color: var(--primary);
+    }
+    
+    &[class$=--secondary] {
+        --button__color: var(--secondary);
+        --button__bg--color: var(--secondary);
+    }
+    
+    &[class$=--tertiary] {
+        --button__color: var(--tertiary);
+        --button__bg--color: var(--tertiary);
+    }
+    
+    &[class$=--primaryDark] {
+        --button__color: var(--primaryDark);
+        --button__bg--color: var(--primaryDark);
+    }
+    
+    &[class$=--neutral] {
+        --button__color: var(--neutral);
+        --button__bg--color: var(--neutral);
+    }
+
+}

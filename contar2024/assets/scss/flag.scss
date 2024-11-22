@@ -1,0 +1,243 @@
+ /* Flag */
+  .flag {
+    width: var(--flag__width);
+    height: var(--flag__height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    .flag__stripe--static--top, .flag__stripe--static--bottom {
+      background-color: var(--primary);
+      height: 30%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flag__stripe--static--top {
+      border-top-left-radius: var(--flag__border--radius);
+      border-top-right-radius: var(--flag__border--radius);
+    }
+
+    .flag__stripe--static--bottom {
+      border-bottom-left-radius: var(--flag__border--radius);
+      border-bottom-right-radius: var(--flag__border--radius);
+    }
+
+    .flag__inner-wrapper {
+      position: relative;
+      width: 100%;
+      height: 40%;
+
+      %baseDivider {
+        position: absolute;
+        top: var(--flag__position--top);
+        left: -8px;
+        width: calc(100% + 12px);
+        border: var(--flag__divider);
+        z-index: 1;
+      }
+
+      hr.flag__divider--bottom {
+        --flag__divider: dashed 1.5px var(--secondaryDark);
+        --flag__position--top: 0%;
+        @extend %baseDivider;
+      }
+
+      hr.flag__divider--pob {
+        --flag__divider: dashed 1.5px var(--severe);
+        --flag__position--top: var(--flag__stripe--height);
+        @extend %baseDivider;
+      }
+
+      hr.flag__divider--middle {
+        --flag__divider: dashed 1px var(--tertiary);
+        --flag__position--top: 50%;
+        mix-blend-mode: darken;
+        @extend %baseDivider;
+      }
+
+      hr.flag__divider--ind {
+        --flag__divider: dashed 1.5px var(--danger);
+        --flag__position--top: var(--flag__stripe--height);
+        @extend %baseDivider;
+      }
+
+      hr.flag__divider--top {
+        --flag__divider: dashed 1.5px var(--secondaryDark);
+        --flag__position--top: 100%;
+        @extend %baseDivider;
+      }
+    } 
+
+    %baseFranjaDinamica {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: var(--flag__stripe--height);
+      background-color: var(--primary);
+      transition: height var(--stripe__transition) ease-in-out;
+    }
+
+    .flag__stripe--top {
+      @extend %baseFranjaDinamica;
+      top: 0;
+      position: relative;
+
+      &:hover {
+        background-color: var(--severe);
+      }
+    }
+    
+    .stripe__blink--top {
+      animation: infinite blinkTop 2s;
+    }
+
+    @keyframes blinkTop {
+      0% {
+        background-color: var(--primary);
+      }
+      
+      100% {
+        background-color: var(--severe);
+      }
+
+      0% {
+        background-color: var(--primary);
+      }
+    }
+    }
+    
+    .flag__stripe--bottom {
+      @extend %baseFranjaDinamica;
+      bottom: 0;
+      position: relative;
+
+      &:hover {
+        background-color: var(--danger);
+      }
+    }
+
+    .stripe__blink--bottom {
+      animation: infinite blinkBottom 2s;
+    }
+
+    @keyframes blinkBottom {
+      0% {
+        background-color: var(--primary);
+      }
+      
+      100% {
+        background-color: var(--danger);
+      }
+      
+      0% {
+        background-color: var(--primary);
+      }
+    }
+
+    // Stripes
+    %baseWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      align-items: center;
+      position: absolute;
+      z-index: 2;
+      // mix-blend-mode: hard-light;
+    }
+
+    .stripe__inner-wrapper {
+
+      &--top {
+        @extend %baseWrapper;
+        bottom: 20%;
+      }
+      
+      &--bottom {
+        @extend %baseWrapper;
+        top: 50%;
+      }
+    }
+        
+    %baseOutput {
+    font-size: var(--output__font--size);
+    font-weight: 600;
+    text-transform: uppercase;
+    }
+
+    .flag__output--top, .flag__output--pob {
+    --output__font--size: 18px;
+    @extend %baseOutput;
+    font-size: var(--output__font--size);
+    color: var(--severe--dark);
+    }
+
+    .flag__output--bottom, .flag__output--ind {
+    --output__font--size: 18px;
+    @extend %baseOutput;
+    font-size: var(--output__font--size);
+    color: var(--danger--dark);
+    }
+
+    .flag__inner-text--top  {
+    --output__font--size: 14px;
+    @extend %baseOutput;
+    font-size: var(--output__font--size);
+    color: var(--secondary);
+    }
+
+    .flag__inner-text--bottom {
+    --output__font--size: 14px;
+    @extend %baseOutput;
+    font-size: var(--output__font--size);
+    color: var(--secondary);
+    } 
+
+    .flag__stripe--middle {
+      --flag__padding: 14px;
+      --flag__translate: 72px;
+
+      height: var(--flag__stripe--height);
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 56px;
+      align-items: center;
+      padding: var(--flag__padding) 0;
+      box-sizing: border-box;
+      background-color: white;
+
+      .sun {
+        --sun__width: calc(var(--flag__stripe--height) / 5 - var(--flag__padding));
+        width: var(--sun__width);
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--sun__color);
+        transition: height width var(--stripe__transition) ease-in;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        output {
+          font-weight: bolder;
+          color: var(--tertiaryDark);
+          mix-blend-mode: multiply;
+          font-size: calc(var(--flag__stripe--height));
+          position: absolute;
+          text-wrap: wrap;
+          text-align: center;
+        }
+      }
+    }
+  
