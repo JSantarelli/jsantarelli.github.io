@@ -1,0 +1,144 @@
+{
+    "RELACIONES": [
+        {
+            "MANDT": "100",
+            "ID": "0072255351",
+            "CONTRATO": "1333895",
+            "ID_USER": "P1683872",
+            "TITULAR": "",
+            "DISTRITO": "118",
+            "REGION": "Z002",
+            "FECHA_ALTA": "2024-11-15",
+            "HORA_ALTA": "11:18:55",
+            "ADHESION_FD": "",
+            "FECHA_BAJA": "0000-00-00",
+            "HORA_BAJA": "00:00:00",
+            "ALIAS_CONT": "Av. Centenario 1480",
+            "DOMICILIO": "LIBERTADOR DEL AV 14745     ACASSUSO",
+            "PRINCIPAL": "X",
+            "FEC_ULT_NOTIF": "0000-00-00"
+        },
+        {"mail":"santarellivisual@gmail.com"},
+        {
+            "ERROR": "",
+            "PERFIL": {
+                "MANDT": "100",
+                "ID": "P1683872",
+                "NOMBRE": "Nicolás",
+                "APELLIDO": "Santarelli",
+                "COD_AREA": "",
+                "TELEFONO": "",
+                "TIPO_DOC": "",
+                "NRO_DOC": "",
+                "MAIL": "santarellivisual@gmail.com",
+                "FECHA_ALTA": "2024-11-15",
+                "HORA_ALTA": "11:18:55",
+                "FECHA_MOD": "2024-11-15",
+                "HORA_MOD": "11:18:55",
+                "FECHA_ULT_ING": "2025-01-20",
+                "HORA_ULT_ING": "14:04:37",
+                "MAS_INFO": "X",
+                "TIPO_TEL": "",
+                "CANAL": "",
+                "FECHA_BAJA": "0000-00-00",
+                "HORA_BAJA": "00:00:00",
+                "CANAL_BAJA": ""
+            }
+        },
+        {
+            "codigo": "01",
+            "descripcion": "No cumple con la cantidad mínima de documentos abiertos para acceder a la regularización",
+            "codigoMensaje": "02",
+            "idMatriz": 0,
+            "deudaPrescripta": false,
+            "importeTotalSaldo": 218394.76,
+            "importeDeudaOriginal": 0.0,
+            "importeDeudaOriginalContado": 0.0,
+            "importeDeudaConDescuento": 0.0,
+            "importeDeudaConDescuentoContado": 0.0,
+            "importeDescuento": 0.0,
+            "importeDescuentoContado": 0.0,
+            "tasa": 0.0,
+            "tasaNominalAnual": 0.0,
+            "planes": null
+        },
+        {
+            "EXPORT": {
+                "ENCONTRO_ECPS": "X"
+            },
+            "TABLES": {
+                "T_CABECERA": [
+                    {
+                        "MONTO_TOTAL": 3402.73,
+                        "FECHA_EMISION": "2021-12-13",
+                        "CTA_CONTRATO": "000001333895",
+                        "COMPENSADO": "X",
+                        "NRO_ECP": "80000862007",
+                        "MARCA": "",
+                        "FECHA_VTO": "2021-12-20",
+                        "ESTADOPROCESO": ""
+                    }
+                ],
+                "T_DETALLE": [
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": 1598.83,
+                        "FECHA_VENC": "2021-10-13",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 88.64,
+                        "OTROS_IMPUESTOS": 19.7,
+                        "IMPORTE_TOTAL": 2035.49,
+                        "MANDT": "100",
+                        "XBLNR": "0106A06020549A",
+                        "FECHA_EMISION": "2021-09-04",
+                        "RECARGOS": 328.32,
+                        "RECARGO_AJ_EJ": 0
+                    },
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": 1219.55,
+                        "FECHA_VENC": "2021-11-16",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 31.4,
+                        "OTROS_IMPUESTOS": 0,
+                        "IMPORTE_TOTAL": 1367.24,
+                        "MANDT": "100",
+                        "XBLNR": "0106A06129904A",
+                        "FECHA_EMISION": "2021-10-09",
+                        "RECARGOS": 116.29,
+                        "RECARGO_AJ_EJ": 0
+                    }
+                ],
+                "T_INFO_CABECERA": [
+                    {
+                        "IMPORTE_TOTAL_FA": 3402.73,
+                        "CC_DESCRIP": "",
+                        "IC_DESCRIP": "ACURA S.A.",
+                        "INTERLOCUTOR": "0001561548",
+                        "CTA_CONTRATO": "000001333895",
+                        "NRO_ECP": "80000862007",
+                        "TEXTO_PIE": "Recargos e Intereses calculados hasta el 13.12.2021",
+                        "CC_COND_IVA": "Responsable Inscripto no agente de Retención/Percepción",
+                        "IC_COND_IIBB": "30BVI646707447",
+                        "IMPORTE_TOTAL_PP": 0,
+                        "MANDT": "100",
+                        "CC_CATEGORIA": "No Residencial PV",
+                        "IC_CUIT": "30646707443",
+                        "CC_TOTAL": 8265.91,
+                        "TOTAL_A_PAGAR": 3402.73,
+                        "CC_DIRECCION": "SAN ISIDRO, LIBERTADOR DEL AV 14745",
+                        "VENCIMIENTO": "2021-12-20",
+                        "IMPORTE_TOTAL_CR": 0,
+                        "IC_DIRECCION": "LIBERTADOR DEL AV 14745   B1641AND SAN ISIDRO"
+                    }
+                ]
+            }
+        }
+    ]
+}

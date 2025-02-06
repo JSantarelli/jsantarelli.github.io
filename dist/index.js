@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/ComponentContainer"],function(e){"use strict";new e({name:"sap.f.ShellBarWithFlexibleColumnLayout",height:"100%",settings:{id:"sap.f.ShellBarWithFlexibleColumnLayout"},manifest:true}).placeAt("content")});
+//# sourceMappingURL=index.js.map

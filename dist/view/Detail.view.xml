@@ -1,0 +1,186 @@
+<mvc:View displayBlock="true" controllerName="sap.f.ShellBarWithFlexibleColumnLayout.controller.Detail" height="100%"
+		xmlns="sap.uxap"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:m="sap.m"
+		xmlns:f="sap.f"
+		xmlns:form="sap.ui.layout.form">
+
+	<ObjectPageLayout id="ObjectPageLayout"
+					 showTitleInHeaderContent="true"
+					alwaysShowContentHeader="false"
+					preserveHeaderStateOnScroll="false"
+					headerContentPinnable="true"
+					isChildPage="true"
+					upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+				<m:VBox class="kpi__container">
+					<m:Title text="{products>ALIAS_CONT}" wrapping="true" class="sapUiSmallMarginEnd"/>
+				</m:VBox>
+				</expandedHeading>
+					<snappedHeading>
+						<m:HBox wrap="NoWrap" alignItems="Center" class="sapUiTinyMarginEnd">
+							<m:VBox wrap="Wrap">
+								<m:Title text="{products>MAIL}" wrapping="true" />
+								<m:Label text="{products>NOMBRE} {products>APELLIDO}" wrapping="true" />
+							</m:VBox>
+						</m:HBox>
+					</snappedHeading>
+				<navigationActions>
+					<m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" id="enterFullScreenBtn" tooltip="Enter Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/fullScreen} !== null }"/>
+					<m:OverflowToolbarButton type="Transparent" icon="sap-icon://exit-full-screen" press="handleExitFullScreen" id="exitFullScreenBtn" tooltip="Exit Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/exitFullScreen} !== null }"/>
+					<m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose"  tooltip="Close middle column" visible="{= ${/actionButtonsInfo/midColumn/closeColumn} !== null }"/>
+				</navigationActions>
+
+				<actions>
+					<m:Button
+							text="Gestionar propiedad"
+							type="Default"
+							press="toggleAreaPriority"/>
+					<m:Button
+							text="Pago parcial"
+							type="Neutral"
+							press="toggleAreaPriority"/>
+					<m:Button
+							text="Pagar con facilidades"
+							type="Ghost"
+							press="toggleAreaPriority"/>	
+					<m:Button
+							text="Pagar"
+							type="Emphasized"
+							press="toggleAreaPriority"/>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<headerContent >
+			<m:FlexBox wrap="Wrap" justifyContent="SpaceBetween" alignItems="End" class="kpi__container">
+				<m:VBox>
+					<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+						<m:Label text="Nomenclatura catastral"/>
+						<m:Text text="{products>CONTRATO}"/>
+					</m:VBox>
+					<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+						<m:Label text="DISTRITO"/>
+						<m:Text text="{products>DISTRITO}"/>
+					</m:VBox>
+					<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+						<m:Label text="REGION"/>
+						<m:ObjectNumber number="{products>REGION}" emphasized="false"/>
+					</m:VBox>
+				</m:VBox>
+				<m:HBox class="kpi__container">
+					<m:VBox justifyContent="End" alignItems="End" class="sapUiSmallMarginEnd">
+						<m:Label text="Cuánto debo pagar?"/>
+						<m:Text class="kpi__count kpi__count--primary" text="{products>/facturacion/importeTotalSaldo}"/>
+						<m:ObjectStatus text="Primer vencimiento: {products>/facturacion/pagos/0/values/0/FECHA_VENC}" icon="sap-icon://information" state="None" />
+					</m:VBox>
+					<m:VBox justifyContent="End" alignItems="End" class="sapUiSmallMarginEnd">
+						<m:Label text="Cuánto adeudo?"/>
+						<m:Text text="{products>/facturacion/importeDeudaOriginal}" class="kpi__count kpi__count--tertiary"/>
+						<m:ObjectStatus text="Primer vencimiento: {products>/facturacion/pagos/0/values/0/FECHA_VENC}" icon="sap-icon://information" state="None" />
+					</m:VBox>
+				</m:HBox>
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection id="section1" title="Mis Pagos">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>	
+							<m:Table
+								id="pagosTable"
+								mode="SingleSelectMaster"
+								itemPress="handleItemPress"
+								items="{path: 'products>/facturacion/pagos/0/values'}">
+								<m:columns>
+									<m:Column>
+										<m:Label text="Cuenta" />
+									</m:Column>
+									<m:Column>
+										<m:Label text="Detalle" />
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Active">
+										<m:cells>
+											<m:RadioButtonGroup>
+												<m:RadioButton text="{products>XBLNR_DESC}" selected="false"/>
+											</m:RadioButtonGroup>
+											<m:Text text="{products>IMPORTE_ORIGINAL}" />
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection id="section2" title="Mis cupones (Pago parcial)">
+				<subSections>
+					<ObjectPageSubSection>
+							<blocks>
+							<m:Table
+								id="parcialTable"
+								mode="SingleSelectMaster"
+								itemPress="handleItemPress"
+								items="{path: 'products>/facturacion/parcial/0/values'}">
+								<m:columns>
+									<m:Column>
+										<m:Label text="Cuenta" />
+									</m:Column>
+									<m:Column>
+										<m:Label text="Detalle" />
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Active">
+										<m:cells>
+											<m:RadioButtonGroup>
+												<m:RadioButton text="{products>XBLNR_DESC}" selected="false"/>
+											</m:RadioButtonGroup>
+											<m:Text text="{products>IMPORTE_ORIGINAL}" />
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection id="section3" title="Pago con facilidades">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<m:Table
+								id="facilidadesTable"
+								mode="SingleSelectMaster"
+								itemPress="handleItemPress"
+								items="{path: 'products>/facturacion/facilidades/0/values'}">
+								<m:columns>
+									<m:Column>
+										<m:Label text="Cuenta" />
+									</m:Column>
+									<m:Column>
+										<m:Label text="Detalle" />
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Active">
+										<m:cells>
+											<m:RadioButtonGroup>
+												<m:RadioButton text="{products>XBLNR_DESC}" selected="false"/>
+											</m:RadioButtonGroup>
+											<m:Text text="{products>IMPORTE_ORIGINAL}" />
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>

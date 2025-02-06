@@ -1,0 +1,33 @@
+<mvc:View xmlns="sap.f"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	displayBlock="true"
+	controllerName="sap.f.ShellBarWithFlexibleColumnLayout.controller.FlexibleColumnLayout"
+	height="100%">
+	<m:Page>
+		<m:customHeader>
+			<ShellBar
+					title="AySA" secondTitle="Bienvenido a la Oficina Virtual"
+					  homeIcon="./assets/img/aysa__logo.jpg"
+					  showCopilot="true"
+					  showSearch="true"
+					  showNotifications="true"
+					  showNavButton="{= ${/layout} === 'EndColumnFullScreen'}"
+					  notificationsNumber="2"
+					  navButtonPressed="handleBackButtonPressed"
+			>
+				<menu>
+					<m:Menu>
+						<m:MenuItem text="Cupones de pago" icon="sap-icon://payment-approval" />
+	
+						<m:MenuItem text="Pago con facilidades" icon="sap-icon://wallet" />
+					</m:Menu>
+				</menu>
+				<profile>
+					<m:Avatar initials="VG"/>
+				</profile>
+			</ShellBar>
+		</m:customHeader>
+		<FlexibleColumnLayout id="fcl" stateChange="onStateChanged" layout="{/layout}" backgroundDesign="Solid"/>
+	</m:Page>
+</mvc:View>

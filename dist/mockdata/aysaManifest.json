@@ -1,0 +1,131 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+        "id": "com.aysa.cloud.ovPagarDeuda",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "sourceTemplate": {
+            "id": "ui5template.basicSAPUI5ApplicationProject",
+            "version": "1.40.12"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "rootView": {
+            "viewName": "com.aysa.cloud.ovPagarDeuda.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        },
+        "dependencies": {
+            "minUI5Version": "1.85.0",
+            "libs": {
+                "sap.ui.layout": {},
+                "sap.ui.core": {},
+                "sap.m": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.aysa.cloud.ovPagarDeuda.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "com.aysa.cloud.ovPagarDeuda.view",
+                "controlAggregation": "content",
+                "controlId": "idAppControl",
+                "clearControlAggregation": true
+            },
+            "routes": [
+                {
+                    "name": "RouteMain",
+                    "pattern": "",
+                    "target": [
+                        "TargetApp"
+                    ]
+                },
+                {
+                    "name": "RouteSimPagDeuda",
+                    "pattern": "SimuladorPD/{cuentaContrato}",
+                    "target": [
+                        "TargetSimuladorPD"
+                    ]
+                },
+                {
+                    "name": "RouteContacto",
+                    "pattern": "DatosContacto",
+                    "target": [
+                        "TargetDatosContacto"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetApp": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "Main",
+                    "viewName": "Main"
+                },
+                "TargetSysError": {
+                    "viewType": "XML",
+                    "viewName": "MessagePageError"
+                },
+                "TargetSimuladorPD": {
+                    "viewType": "XML",
+                    "viewName": "SimuladorPD"
+                },
+                "TargetDatosContacto": {
+                    "viewType": "XML",
+                    "viewName": "DatosContacto"
+                },
+                "TargetSysConfirm": {
+                    "viewType": "XML",
+                    "viewName": "MessagePageConfirm"
+                }
+            }
+        }
+    },
+    "sap.platform.hcp": {
+        "uri": "webapp",
+        "_version": "1.1.0"
+    }
+}

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/model/json/JSONModel","sap/ui/core/mvc/Controller"],function(o,e){"use strict";return e.extend("sap.f.ShellBarWithFlexibleColumnLayout.controller.AboutPage",{onInit:function(){this.oRouter=this.getOwnerComponent().getRouter();this.oModel=this.getOwnerComponent().getModel()},onBack:function(){window.history.go(-1)}})});
+//# sourceMappingURL=AboutPage.controller.js.map

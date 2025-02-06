@@ -1,0 +1,201 @@
+{
+	"perfil": {
+		"MANDT": "100",
+		"ID": "P1683872",
+		"NOMBRE": "Valentino",
+		"APELLIDO": "Giardelli",
+		"COD_AREA": "299",
+		"TELEFONO": "5186062",
+		"TIPO_DOC": "DNI",
+		"NRO_DOC": "31359294",
+		"MAIL": "santarellivisual@gmail.com",
+		"FECHA_ALTA": "2024-11-15",
+		"HORA_ALTA": "11:18:55",
+		"FECHA_MOD": "2024-11-15",
+		"HORA_MOD": "11:18:55",
+		"FECHA_ULT_ING": "2025-01-20",
+		"HORA_ULT_ING": "14:04:37",
+		"MAS_INFO": "X",
+		"TIPO_TEL": "",
+		"CANAL": "",
+		"FECHA_BAJA": "0000-00-00",
+		"HORA_BAJA": "00:00:00",
+		"CANAL_BAJA": "",
+		"cuenta": [
+			{
+				"MANDT": "100",
+				"ID": "0072255351",
+				"CONTRATO": "1333895",
+				"ID_USER": "P1683872",
+				"TITULAR": "",
+				"DISTRITO": "118",
+				"REGION": "Z002",
+				"FECHA_ALTA": "2024-11-15",
+				"HORA_ALTA": "11:18:55",
+				"ADHESION_FD": "",
+				"FECHA_BAJA": "0000-00-00",
+				"HORA_BAJA": "00:00:00",
+				"ALIAS_CONT": "Av. Centenario 1480",
+				"DOMICILIO": "LIBERTADOR DEL AV 14745 ACASSUSO",
+				"PRINCIPAL": "X",
+				"FEC_ULT_NOTIF": "0000-00-00"
+			},
+			{
+				"MANDT": "100",
+				"ID": "08764325",
+				"CONTRATO": "645356",
+				"ID_USER": "P432453",
+				"TITULAR": "",
+				"DISTRITO": "119",
+				"REGION": "Z004",
+				"FECHA_ALTA": "2025-11-15",
+				"HORA_ALTA": "13:18:55",
+				"ADHESION_FD": "",
+				"FECHA_BAJA": "0000-00-00",
+				"HORA_BAJA": "00:00:00",
+				"ALIAS_CONT": "Udaondo 2432",
+				"DOMICILIO": "Udaondo 2432 BELGRANO",
+				"PRINCIPAL": "X",
+				"FEC_ULT_NOTIF": "0000-00-00"
+			}
+		]
+	},
+	"facturacion": {
+		"count": 2,
+		"codigo": "01",
+		"descripcion": "No cumple con la cantidad mínima de documentos abiertos para acceder a la regularización",
+		"codigoMensaje": "02",
+		"idMatriz": 0,
+		"deudaPrescripta": false,
+		"importeTotalSaldo": "218.394,76",
+		"importeDeudaOriginal": "305.043,21",
+		"importeDeudaOriginalContado": 0.0,
+		"importeDeudaConDescuento": 0.0,
+		"importeDeudaConDescuentoContado": 0.0,
+		"importeDescuento": 0.0,
+		"importeDescuentoContado": 0.0,
+		"tasa": 0.0,
+		"tasaNominalAnual": 0.0,
+		"planes": null,
+		"pagos": [
+			{
+				"values": [
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": "218.394,76",
+                        "FECHA_VENC": "2025-10-13",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 88.64,
+                        "OTROS_IMPUESTOS": 19.7,
+                        "IMPORTE_TOTAL": "218.394,76",
+                        "MANDT": "100",
+                        "XBLNR": "0106A06020549A",
+                        "FECHA_EMISION": "2025-09-04",
+                        "RECARGOS": 328.32,
+                        "RECARGO_AJ_EJ": 0
+                    },
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": "121.539.55",
+                        "FECHA_VENC": "2025-11-16",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 31.4,
+                        "OTROS_IMPUESTOS": 0,
+                        "IMPORTE_TOTAL": "121.539.55",
+                        "MANDT": "100",
+                        "XBLNR": "0106A06129904A",
+                        "FECHA_EMISION": "2025-10-09",
+                        "RECARGOS": 116.29,
+                        "RECARGO_AJ_EJ": 0
+                    }
+				]
+			}
+		],
+		"parcial": [
+			{
+				"values": [
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": "218.394,76",
+                        "FECHA_VENC": "2021-10-13",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 88.64,
+                        "OTROS_IMPUESTOS": 19.7,
+                        "IMPORTE_TOTAL": "218.394,76",
+                        "MANDT": "100",
+                        "XBLNR": "0106A06020549A",
+                        "FECHA_EMISION": "2021-09-04",
+                        "RECARGOS": 328.32,
+                        "RECARGO_AJ_EJ": 0
+                    },
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": "121.539.55",
+                        "FECHA_VENC": "2021-11-16",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 31.4,
+                        "OTROS_IMPUESTOS": 0,
+                        "IMPORTE_TOTAL": "121.539.55",
+                        "MANDT": "100",
+                        "XBLNR": "0106A06129904A",
+                        "FECHA_EMISION": "2021-10-09",
+                        "RECARGOS": 116.29,
+                        "RECARGO_AJ_EJ": 0
+                    }
+				]
+			}
+		],
+		"facilidades": [
+			{
+				"values": [
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": "218.394,76",
+                        "FECHA_VENC": "2021-10-13",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 88.64,
+                        "OTROS_IMPUESTOS": 19.7,
+                        "IMPORTE_TOTAL": "218.394,76",
+                        "MANDT": "100",
+                        "XBLNR": "0106A06020549A",
+                        "FECHA_EMISION": "2021-09-04",
+                        "RECARGOS": 328.32,
+                        "RECARGO_AJ_EJ": 0
+                    },
+                    {
+                        "XBLNR_DESC": "Facturación General",
+                        "IMPORTE_ORIGINAL": "121.539.55",
+                        "FECHA_VENC": "2021-11-16",
+                        "ES_PP": "",
+                        "ES_CREDITO": "",
+                        "NRO_ECP": "80000862007",
+                        "ES_FACTURA": "X",
+                        "IVA_RNI": 31.4,
+                        "OTROS_IMPUESTOS": 0,
+                        "IMPORTE_TOTAL": "121.539.55",
+                        "MANDT": "100",
+                        "XBLNR": "0106A06129904A",
+                        "FECHA_EMISION": "2021-10-09",
+                        "RECARGOS": 116.29,
+                        "RECARGO_AJ_EJ": 0
+                    }
+				]
+			}
+		]
+	}  
+}

@@ -1,0 +1,67 @@
+{
+    "menuItems": 
+        [
+            {
+            "header": "Gestión de Cuenta",
+            "options": [
+                { "item": "Cambiar la titularidad del servicio" },
+                { "item": "Cambiar el domicilio postal" },
+                { "item": "Corregir la dirección del inmueble" },
+                { "item": "Solicitar cambio de situación impositiva" }
+            ]
+            },
+            {
+            "header": "Facturación y Pagos",
+            "options": [
+                { "item": "Ver y pagar mis facturas" },
+                { "item": "Pagar mi deuda" },
+                { "item": "Ver y pagar mis Planes de pago" },
+                { "item": "Adhesión a Factura Digital" },
+                { "item": "No recibí mi factura" },
+                { "item": "Débito automático" },
+                { "item": "Verificar pago" },
+                { "item": "Alta de débito pendiente" },
+                { "item": "Devolución de crédito" }
+            ]
+            },
+            {
+            "header": "Inmuebles y Propiedades",
+            "options": [
+                { "item": "Solicitar cargo por construcción" },
+                { "item": "Reclamar cargo de agua por construcción" },
+                { "item": "Facturar a consorcio" },
+                { "item": "Solicitar cambio de situación impositiva" },
+                { "item": "Independizar mi factura" },
+                { "item": "Unificar Baulera o cochera" },
+                { "item": "Subdividir / Rectificar propiedad horizontal" },
+                { "item": "Recategorizar unidad con destino cochera" },
+                { "item": "Informar cambios en el Inmueble" },
+                { "item": "Actualizar datos de la parcela / terreno" }
+            ]
+            },
+            {
+            "header": "Conexiones y Servicios Técnicos",
+            "options": [
+                { "item": "Solicitar una conexión" },
+                { "item": "Localizar una conexión" },
+                { "item": "Solicitar el retiro de una conexión" },
+                { "item": "Solicitar la desconexión del Servicio" },
+                { "item": "Instalación de medidor" },
+                { "item": "Solicitar la inspección del medidor" },
+                { "item": "Verificar reparación de pérdidas internas" },
+                { "item": "Solicitar inspección instalaciones internas" },
+                { "item": "Factibilidad técnica" },
+                { "item": "Solicitar Planos Domiciliarios" }
+            ]
+            },
+            {
+            "header": "Exenciones y Tarifas Especiales",
+            "options": [
+                { "item": "Solicitar la Tarifa Social" },
+                { "item": "Tratamiento de deuda - Tarifa Social" },
+                { "item": "Solicitar Factura Braille" },
+                { "item": "Exención de pago" }
+            ]
+            }
+        ]      
+}

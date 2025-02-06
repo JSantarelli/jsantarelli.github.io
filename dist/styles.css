@@ -1,0 +1,43 @@
+:root {
+  --fontFamily: Arial, Helvetica, sans-serif;
+  --primary: #0055A6;
+  --secondary: #009BDB;
+  --tertiary: #EE6436;
+  --fontSize: 1.75rem;
+  --panelGap: 1rem;
+}
+
+body {
+  font-family: var(--fontFamily);
+}
+
+.sidepanel__subtitle {
+  font-size: 20px !important;
+  font-weight: lighter !important;
+}
+
+.kpi__container {
+  gap: var(--panelGap) !important;
+}
+.kpi__container .kpi__count {
+  font-size: var(--fontSize) !important;
+  font-weight: 700;
+}
+.kpi__container .kpi__count--primary {
+  color: var(--primary) !important;
+}
+.kpi__container .kpi__count--secondary {
+  color: var(--secondary) !important;
+}
+.kpi__container .kpi__count--tertiary {
+  color: var(--tertiary) !important;
+}
+
+@media screen and (max-width: 780px) {
+  .kpi__count {
+    --fontSize: 1rem;
+    font-size: var(--fontSize) !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

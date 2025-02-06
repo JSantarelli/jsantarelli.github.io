@@ -1,0 +1,107 @@
+<mvc:View displayBlock="true" controllerName="sap.f.ShellBarWithFlexibleColumnLayout.controller.List" height="100%"
+	  xmlns="sap.m"
+	  xmlns:f="sap.f"
+	  xmlns:mvc="sap.ui.core.mvc">
+	<f:DynamicPage id="dynamicPageId"
+				   toggleHeaderOnTitleClick="false">
+			<f:title>
+				<f:DynamicPageTitle>
+					<f:heading>
+						<Title text="{products>/perfil/NOMBRE} {products>/perfil/APELLIDO}"/>
+					</f:heading>
+					<f:expandedContent>
+						<Label text="{products>/perfil/MAIL}"/>
+					</f:expandedContent>
+					<f:snappedContent>
+						<Label text="{products>/perfil/NOMBRE}"/>
+					</f:snappedContent>
+					<f:snappedTitleOnMobile>
+						<Title text="{products>/perfil/TIPO_DOC}: {products>/perfil/NRO_DOC}"/>
+					</f:snappedTitleOnMobile>
+					<f:actions>
+						<Button
+								text="Acción contextual"
+								type="Transparent"
+								press="onPressOpenPopover">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="AlwaysOverflow" closeOverflowOnInteraction="false" />
+							</layoutData>
+						</Button>
+					</f:actions>
+					<f:navigationActions>
+						<Button
+								icon="sap-icon://full-screen"
+								type="Transparent" />
+						<Button
+								icon="sap-icon://decline"
+								type="Transparent" />
+					</f:navigationActions>
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:content>
+				<FlexBox direction="Column">
+					<Table
+						id="productsTable"
+						mode="SingleSelectMaster"
+						itemPress="onListItemPress"
+						inset="false"
+						items="{
+							path: 'products>/perfil/cuenta',
+							sorter: {
+								path: 'ALIAS_CONT'
+							}
+						}"
+						class="sapFDynamicPageAlignContent"
+						width="auto">
+						<headerToolbar>
+							<OverflowToolbar>
+							     <Title text="Mis cuentas ({products>/facturacion/count})" class="sidepanel__subtitle" level="H2" />
+								<ToolbarSpacer/>
+								<SearchField search="onSearch" placeholder="Buscar cuenta..." width="17.5rem"/>
+								<OverflowToolbarButton icon="sap-icon://add" type="Transparent" press="onAdd"/>
+								<OverflowToolbarButton icon="sap-icon://sort" type="Transparent" press="onSort"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="Propiedades" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Navigation">
+								<cells>
+									<ObjectIdentifier title="{products>ALIAS_CONT}" text="{products>ID/}" />
+									<ObjectNumber
+											number="{
+												parts:[{path:'products>ALIAS_CONT'},{path:'products>facturacion/importeTotalSaldo'}],
+												type: 'sap.ui.model.type.Currency',
+												formatOptions: {showMeasure: false}
+											}"
+											unit="{products>facturacion/importeTotalSaldo}" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Text text=""/>
+					<FlexBox wrap="Wrap" justifyContent="SpaceBetween">
+						<Text text="Mis trámites" class="sidepanel__subtitle"/>
+						<SearchField
+								placeholder="Buscar en el menú..."
+								search="onSearchMenu"
+								width="100%" />
+					</FlexBox>
+					<Panel headerText="Menu" class="sidepanel__menu">
+						<List id="menuList" items="{menuItems>/menuItems}">
+						<CustomListItem>
+							<Panel headerText="{menuItems>header}" expandable="true" expanded="true">
+							<List items="{menuItems>options}" templateShareable="true">
+								<StandardListItem title="{menuItems>item}" />
+							</List>
+							</Panel>
+						</CustomListItem>
+						</List>
+					</Panel>
+				</FlexBox>
+			</f:content>	
+	</f:DynamicPage>
+</mvc:View>
