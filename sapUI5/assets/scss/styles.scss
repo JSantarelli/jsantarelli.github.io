@@ -1,5 +1,5 @@
 :root {
-    --fontFamily: Arial, Helvetica, sans-serif;
+    --fontFamily: 'Roboto', 'Source Sans Pro', sans-serif;
     --primary: #0055A6;
     --secondary: #009BDB;
     --tertiary: #EE6436;
@@ -7,13 +7,20 @@
     --panelGap: 1rem;
 }
 
-body {
-    font-family: var(--fontFamily);
+html, body, main {
+    font-family: var(--fontFamily)!important;
+    overflow-x: hidden;
+}
+
+
+.sapMTitle, .sapMLabel {
+    font-family: var(--fontFamily)!important;
 }
 
 .sidepanel__subtitle {
+    font-family: var(--fontFamily)!important;
     font-size: 20px!important;
-    font-weight: lighter!important;
+    font-weight: light!important;
 }
 
 .kpi__container {
@@ -40,7 +47,7 @@ body {
 
 @media screen and (max-width: 780px) {
     .kpi__count {
-      --fontSize: 1rem;
+      --fontSize: 1.35rem;
       font-size: var(--fontSize)!important;
     }
   }

@@ -22,7 +22,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  font-family: sans-serif;
+  font-family: Roboto, 'Segoe UI', sans-serif!important;
   margin: 0;
 }
 
