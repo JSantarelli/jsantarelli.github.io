@@ -1,0 +1,192 @@
+@import url("./../assets/scss/_normalize.scss");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2rem;
+  hyphens: manual;
+}
+
+.quote {
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.quote__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+  height: 100%;
+}
+.quote__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  height: fit-content;
+  border-bottom: solid -10px #eee;
+}
+.quote__header h1 {
+  font-size: 1.5rem;
+  color: #1d1d69;
+  align-items: flex-end;
+  margin: 0;
+  flex: 1;
+}
+.quote__header h1 span {
+  font-weight: normal;
+}
+.quote__header .quote__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+  font-size: 0.7rem;
+  line-height: 0rem;
+}
+.quote__header .quote__contact img {
+  margin-bottom: 1rem;
+}
+.quote__header .quote__contact strong span {
+  color: #aaa;
+  font-weight: normal;
+}
+.quote__header .quote__contact a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.quote__section {
+  margin-top: 1rem;
+}
+.quote__section:first-child {
+  grid-row: 1/-1;
+}
+.quote__section:nth-child(2) {
+  height: 100%;
+}
+.quote__section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1d1d69;
+}
+.quote__section h3 {
+  font-size: 1rem;
+  color: #2aa9e0;
+  margin-top: 1rem;
+}
+.quote__section ul {
+  padding-left: 1.5rem;
+}
+.quote__section ul li {
+  margin-bottom: 0.5rem;
+}
+.quote__section ul li span {
+  float: right;
+  color: #2aa9e0;
+  font-weight: bold;
+}
+.quote__summary {
+  border-top: dashed 1px #aaa;
+  align-self: center;
+  line-height: 0.7;
+}
+.quote__summary div.flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.quote__summary div.flex h2 {
+  font-size: 1.4rem;
+  color: #1d1d69;
+}
+.quote__summary div.flex span {
+  color: #2cb234;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.quote__note {
+  display: flex;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  justify-content: flex-end;
+  font-style: italic;
+}
+.quote .quote__footer {
+  font-size: 0.9rem;
+  text-align: right;
+}
+.quote .quote__footer .quote__date {
+  font-style: italic;
+}
+.quote .quote__footer .quote__location {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #888;
+}
+.quote table.quote__schedule {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  width: 100%;
+}
+.quote table.quote__schedule th, .quote table.quote__schedule td {
+  border-bottom: solid 1px #ddd;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+}
+.quote table.quote__schedule th {
+  background-color: #f8f8f8;
+  color: #555;
+  font-weight: 600;
+}
+.quote table.quote__schedule td:last-child {
+  color: #2aa9e0;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: right;
+}
+.quote table.quote__schedule tr > th:last-child {
+  text-align: right;
+}
+@media screen and (max-width: 480px) {
+  .quote__header h1 {
+    flex: 1;
+    font-size: 1.25rem;
+  }
+  .quote__section h2 {
+    font-size: 1rem;
+  }
+  .quote__section table.quote__schedule {
+    font-size: 0.85rem !important;
+  }
+  .quote__section table.quote__schedule tr {
+    margin-bottom: 1rem;
+  }
+  .quote__section table.quote__schedule td:last-child {
+    color: #2aa9e0;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .quote__section table.quote__schedule tr > th:last-child {
+    text-align: left;
+  }
+  .quote__summary {
+    align-self: start;
+    border-top: none !important;
+  }
+  .quote__summary h2 {
+    grid-column: 3;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .quote__grid {
+    gap: 0.5rem !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/*# sourceMappingURL=web.css.map */
