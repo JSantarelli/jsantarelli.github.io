@@ -112,6 +112,7 @@ body {
   text-align: right;
   justify-content: flex-end;
   font-style: italic;
+  line-height: 1.25;
 }
 .quote .quote__footer {
   font-size: 0.9rem;
